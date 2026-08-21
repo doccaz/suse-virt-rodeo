@@ -2,20 +2,17 @@
 slug: the-arrival-welcome
 id: ermykdy1tbse
 type: challenge
-title: "<span id="assignment.7" lang="en" hist="vertrex-bank">\U0001F3E6 Chapter 1: The Arrival</span>"
-teaser: <span id="assignment.8" lang="en" hist="vertrex-bank">Vertex Trust Bank is drowning in legacy <span id="ch1.intro1.1" lang="nolang" no>hypervisor</span>
-  costs. Step into the boardroom, take command of SUSE Virtualization,
-  and inspect your new command center.</span>
+title: "<span id="assignment.7" lang="pt" hist="vertrex-bank">🏦 Capítulo 1: A Chegada</span>"
+teaser: <span id="assignment.8" lang="pt" hist="vertrex-bank">O Vertex Trust Bank está a afogar-se em custos de legado <span id="ch1.intro1.1" lang="nolang" no>hypervisor</span>
+  Entre na sala de reuniões, assuma o comando do SUSE Virtualization,
+  e inspecione o seu novo centro de comando.</span>
 notes:
 - type: text
   contents: |
-    <span id="assignment.1" lang="en" no>
-    # Welcome to the <span id="assignment.1.1"  lang="nolang" no>SUSE Virtualization Rodeo!</span>
+    <span id="assignment.1" lang="pt" no># Bem-vindo ao <span id="assignment.1.1"  lang="nolang" no>SUSE Virtualization Rodeo!</span>
 
-    Please wait while we prepare your lab environment.
-
-    </span><span lang="en" id="ch1.waiting1" hist="vertrex-bank">The rain is lashing against the windows of Vertex Trust Bank headquarters...
-    Sarah, the CTO, is waiting for you in the boardroom.</span>
+Aguarde enquanto preparamos o seu ambiente de laboratório.</span><span lang="pt" id="ch1.waiting1" hist="vertrex-bank">A chuva bate contra as janelas da sede do Vertex Trust Bank...
+    Sarah, a CTO, está à sua espera na sala de reuniões.</span>
     <img class="logos" src="../assets/logos/suse_logo.svg"/>
 tabs:
 - id: 3veafppy6ial
@@ -40,7 +37,7 @@ timelimit: 2400
 enhanced_loading: null
 ---
 
-<span id="assignment.9" lang="en" hist="vertrex-bank">🏦 Chapter 1: The Arrival</span>
+<span id="assignment.9" lang="pt" hist="vertrex-bank">🏦 Capítulo 1: A Chegada</span>
 ==========================
 
 <style type="text/css">
@@ -152,71 +149,65 @@ enhanced_loading: null
 
 
 <div id="101" class="story">
-<span lang="en" id="ch1.intro1" hist="vertrex-bank">
-The rain lashed against the floor-to-ceiling windows of <b class="bank">Vertex Trust Bank</b> headquarters, distorting the city skyline into a gray, watery blur. Inside the glass-walled executive boardroom, the atmosphere was equally turbulent. Sarah, the Chief Technology Officer, paced the length of the room, her eyes fixed on a massive overhead monitor projecting a sea of <b class="danger">red alerts</b> and performance warnings.
+<span lang="pt" id="ch1.intro1" hist="vertrex-bank">A chuva batia contra as janelas do chão ao teto da sede do Vertex Trust Bank, distorcendo o horizonte da cidade num borrão cinzento e aquoso. Dentro da sala de reuniões executiva de paredes de vidro, a atmosfera era igualmente turbulenta. Sarah, a Diretora de Tecnologia, andava de um lado para o outro na sala, com os olhos fixos num enorme monitor suspenso que projetava um mar de alertas vermelhos e avisos de desempenho.
 
-She turned to you, her voice tight with exhaustion. *"We are losing precious milliseconds on every single market transaction. Our legacy <span id="ch1.intro1.1" lang="nolang" no>hypervisor</span>s are buckling under the sheer volume of modern digital banking traffic. The infrastructure is brittle, the storage arrays are constantly falling out of synchronization, and our licensing costs are bleeding our engineering budget completely dry. We cannot survive another year chained to these monolithic, antiquated systems."*
+Ela virou-se para si, com a voz tensa de exaustão. *"Estamos a perder milissegundos preciosos em cada transação de mercado. Os nossos <span id="ch1.intro1.1" lang="nolang" no>hypervisor</span>s legados estão a ceder sob o volume brutal do tráfego bancário digital moderno. A infraestrutura é frágil, os arrays de armazenamento estão constantemente a perder a sincronização, e os custos de licenciamento estão a esgotar por completo o nosso orçamento de engenharia. Não podemos sobreviver mais um ano presos a estes sistemas monolíticos e antiquados."*
 
-You sit quietly at the end of the mahogany table, reviewing the architectural schematics she provided. As an elite **Infrastructure Architect**, you have been brought in for one specific purpose: to save <b class="bank">Vertex Trust Bank</b> from total operational gridlock. They need a bridge to the cloud-native world without rebuilding their entire application stack from scratch.
+Você senta-se em silêncio na ponta da mesa de mogno, revendo os esquemas arquitetónicos que ela forneceu. Como um **Arquiteto de Infraestrutura** de elite, foi trazido para um propósito específico: salvar o Vertex Trust Bank de um bloqueio operacional total. Precisam de uma ponte para o mundo nativo da cloud sem reconstruir toda a sua pilha de aplicações do zero.
 
-*"We have a plan, Sarah,"* you finally say, closing your laptop with a reassuring click. *"We are going to transition the entire datacenter to <b class="virt"><span id="ch1.intro1.2" lang="nolang" no>SUSE Virtualization</span></b>. We will bring your legacy systems into the modern era, and we will do it without missing a beat."*
-</span>
+*"Temos um plano, Sarah,"* diz você finalmente, fechando o portátil com um clique tranquilizador. *"Vamos transitar todo o datacenter para <span id="ch1.intro1.2" lang="nolang" no>SUSE Virtualization</span>. Vamos trazer os seus sistemas legados para a era moderna, e vamos fazê-lo sem perder o ritmo."*</span>
 </div>
 
 
-<span id="assignment.2" lang=en no>
-Your journey begins right now. Before you can begin dismantling the old world, you need to establish a foothold in the new one and dig into the environment.
+<span id="assignment.2" lang=pt no>Sua jornada começa agora mesmo. Antes de poder desmontar o velho mundo, você precisa estabelecer uma base no novo e mergulhar no ambiente.
 
 
 
-## <b class="hovereffect">What is <span id="ch1.intro1.2" lang="nolang" no>SUSE Virtualization</span>?</b>
+## O que é <span id="ch1.intro1.2" lang="nolang" no>SUSE Virtualization</span>?
 
-<b class="virt"><span id="ch1.intro1.2" lang="nolang" no>SUSE Virtualization</span></b> (also known as **<span id="assignment.2.1" lang="nolang" no>Harvester</span>**) is a modern, open-source hyperconverged infrastructure (HCI) platform built on <span id="assignment.2.2" lang="nolang" no>Kubernetes</span>. It runs directly on bare metal and gives the bank enterprise-grade **virtual machines** on a cloud-native foundation, <span id="ch1.intro2"  lang="en" hist="vertrex-bank">exactly the bridge <b class="bank">Vertex Trust Bank</b> needs</span>:
+<span id="ch1.intro1.2" lang="nolang" no>SUSE Virtualization</span> (também conhecido como **<span id="assignment.2.1" lang="nolang" no>Harvester</span>**) é uma plataforma de infraestrutura hiperconvergente (HCI) moderna e de código aberto, construída sobre <span id="assignment.2.2" lang="nolang" no>Kubernetes</span>. Ela roda diretamente em bare metal e oferece ao banco **máquinas virtuais** de nível empresarial sobre uma base cloud-native, <span id="ch1.intro2"  lang="pt" hist="vertrex-bank">exatamente a ponte que o Vertex Trust Bank precisa</span>:
 
-- **<span id="assignment.2.3" lang="nolang" no>KubeVirt</span> + <span id="assignment.2.4" lang="nolang" no>KVM</span>/<span id="assignment.2.5" lang="nolang" no>QEMU</span>**: enterprise virtualization as native <span id="assignment.2.2" lang="nolang" no>Kubernetes</span> workloads. Underneath sits the same battle-hardened **<span id="assignment.2.4" lang="nolang" no>KVM</span>/<span id="assignment.2.5" lang="nolang" no>QEMU</span>** pair that has powered <span id="assignment.2.6" lang="nolang" no>Linux</span> virtualization for decades, which is why the platform can run a huge variety of guest operating systems, <span id="ch1.intro3"  lang="en" hist="vertrex-bank">including the very old ones still serving in the bank's dustiest legacy corners, patiently waiting for their migration</span>
-- **<span id="assignment.2.7" lang="nolang" no>SUSE Storage</span> (<span id="assignment.2.8" lang="nolang" no>Longhorn</span>)**: distributed, replicated block storage across every node, set up and ready out of the box. <span id="ch1.intro4"  lang="en" hist="vertrex-bank">And if the bank ever prefers different storage</span>, **any <span id="assignment.2.9" lang="nolang" no>CSI</span>-compatible storage driver plugs right in**, freedom of choice, never lock-in
-- **<span id="assignment.2.10" lang="nolang" no>Software-defined networking</span>**: VLANs and isolated overlay networks without touching a cable
-- **One open-source bill**: no per-socket <span id="ch1.intro1.1" lang="nolang" no>hypervisor</span> tax
-- **<span id="assignment.2.11" lang="nolang" no>Support</span> that actually listens**: SUSE customers consistently rate **SUSE <span id="assignment.2.11" lang="nolang" no>Support</span>** among the best in the industry, and their feedback directly shapes where the products go next. Try asking a closed-source vendor for a seat at that table
+- **<span id="assignment.2.3" lang="nolang" no>KubeVirt</span> + <span id="assignment.2.4" lang="nolang" no>KVM</span>/<span id="assignment.2.5" lang="nolang" no>QEMU</span>**: virtualização empresarial como cargas de trabalho nativas de <span id="assignment.2.2" lang="nolang" no>Kubernetes</span>. Por baixo, está a mesma dupla **<span id="assignment.2.4" lang="nolang" no>KVM</span>/<span id="assignment.2.5" lang="nolang" no>QEMU</span>**, testada e comprovada, que impulsiona a virtualização <span id="assignment.2.6" lang="nolang" no>Linux</span> há décadas, motivo pelo qual a plataforma consegue rodar uma enorme variedade de sistemas operacionais convidados, <span id="ch1.intro3"  lang="pt" hist="vertrex-bank">incluindo os muito antigos ainda em funcionamento nos cantos legados mais empoeirados do banco, aguardando pacientemente a sua migração</span>
+- **<span id="assignment.2.7" lang="nolang" no>SUSE Storage</span> (<span id="assignment.2.8" lang="nolang" no>Longhorn</span>)**: armazenamento em bloco distribuído e replicado em todos os nós, configurado e pronto para uso imediato. <span id="ch1.intro4"  lang="pt" hist="vertrex-bank">E se o banco alguma vez preferir um armazenamento diferente</span>, **qualquer driver de armazenamento compatível com <span id="assignment.2.9" lang="nolang" no>CSI</span> se conecta perfeitamente**, liberdade de escolha, nunca aprisionamento
+- **<span id="assignment.2.10" lang="nolang" no>Software-defined networking</span>**: VLANs e redes overlay isoladas sem tocar em nenhum cabo
+- **Uma única fatura de código aberto**: sem taxa de <span id="ch1.intro1.1" lang="nolang" no>hypervisor</span> por soquete
+- **<span id="assignment.2.11" lang="nolang" no>Support</span> que realmente ouve**: os clientes da SUSE avaliam consistentemente o **SUSE <span id="assignment.2.11" lang="nolang" no>Support</span>** entre os melhores do setor, e seu feedback molda diretamente os próximos passos dos produtos. Tente pedir a um fornecedor de código fechado um lugar nessa mesa
 
-Because the platform runs *on* <span id="assignment.2.2" lang="nolang" no>Kubernetes</span>, containerized workloads can run on the very same cluster. Keep the division of labor straight from day one: the <b class="virt"><span id="ch1.intro1.2" lang="nolang" no>SUSE Virtualization</span></b> UI manages **virtual machines**; managing containers (and managing whole fleets of clusters) is the job of <span id="assignment.2.12" lang="nolang" no>**Rancher Prime**</span>, which you will meet in a moment.
+Como a plataforma roda *sobre* <span id="assignment.2.2" lang="nolang" no>Kubernetes</span>, cargas de trabalho em contêineres podem rodar no mesmo cluster. Deixe a divisão de responsabilidades clara desde o primeiro dia: a interface do <span id="ch1.intro1.2" lang="nolang" no>SUSE Virtualization</span> gerencia **máquinas virtuais**; gerenciar contêineres (e gerenciar frotas inteiras de clusters) é tarefa do <span id="assignment.2.12" lang="nolang" no>**Rancher Prime**</span>, que você conhecerá em breve.
 
-<span id="ch1.intro5"  lang="en" hist="vertrex-bank">Every proprietary component bleeding the bank's budget dry has a modern, open-source replacement:</span>
+<span id="ch1.intro5"  lang="pt" hist="vertrex-bank">Cada componente proprietário que está a esgotar o orçamento do banco tem uma alternativa moderna e de código aberto:</span>
 
-| The old world (per-socket licensing) | <span id="ch1.intro1.2" lang="nolang" no>SUSE Virtualization</span> |
+| O velho mundo (licenciamento por soquete) | <span id="ch1.intro1.2" lang="nolang" no>SUSE Virtualization</span> |
 |--------------------------------------|---------------------|
-| ISAware proprietary <span id="ch1.intro1.1" lang="nolang" no>hypervisor</span> | <span id="assignment.2.3" lang="nolang" no>KubeVirt</span> + <span id="assignment.2.4" lang="nolang" no>KVM</span> |
-| Proprietary storage array |  SUSE storage, or any <span id="assignment.2.9" lang="nolang" no>CSI</span> driver <span id="ch1.intro6"  lang="en" hist="vertrex-bank">the bank chooses</span> |
-| Closed-source SDN | <span id="assignment.2.13" lang="nolang" no>Kube-OVN</span> + <span id="assignment.2.14" lang="nolang" no>Multus</span> |
-| ISAware Command Throne | <span id="assignment.2.15" lang="nolang" no>SUSE Rancher Prime</span> |
+| <span id="ch1.intro1.1" lang="nolang" no>hypervisor</span> proprietário ISAware | <span id="assignment.2.3" lang="nolang" no>KubeVirt</span> + <span id="assignment.2.4" lang="nolang" no>KVM</span> |
+| Array de armazenamento proprietário |  Armazenamento SUSE, ou qualquer driver <span id="assignment.2.9" lang="nolang" no>CSI</span> <span id="ch1.intro6"  lang="pt" hist="vertrex-bank">o banco escolhe</span> |
+| SDN de código fechado | <span id="assignment.2.13" lang="nolang" no>Kube-OVN</span> + <span id="assignment.2.14" lang="nolang" no>Multus</span> |
+| Trono de Comando ISAware | <span id="assignment.2.15" lang="nolang" no>SUSE Rancher Prime</span> |
 
-No vendor lock-in. No virtualization tax. No proprietary kernel. **One platform, one bill**, <span id="ch1.intro7"  lang="en" hist="vertrex-bank">exactly what you promised Sarah in the boardroom</span>.
-
-<div class="missionbox">
-
-## 🎯 Your Quest Objectives
-
-1. Log in and inspect the unified dashboard
-2. Meet Rancher Prime, the command center!
-3. Validate the distributed storage fabric
-4. Test your administrative terminal access
-
-</div>
+Sem aprisionamento a fornecedores. Sem taxa de virtualização. Sem kernel proprietário. **Uma plataforma, uma única fatura**, <span id="ch1.intro7"  lang="pt" hist="vertrex-bank">exatamente o que prometeste à Sarah na sala de reuniões</span>.
 
 
-<span id="ch1.intro8"  lang="en" hist="vertrex-bank">
-> [!NOTE]
-> Disclaimer: This lab is meant to be educational and not to provide instructions on how to configure a production environment for a 'bank', most decisions made are with the limitations and purpose of this environment.
-</span>
+
+## 🎯 Objetivos da Sua Missão
+
+1. Faça login e inspecione o painel unificado
+2. Conheça o Rancher Prime, o centro de comando!
+3. Valide o tecido de armazenamento distribuído
+4. Teste seu acesso administrativo ao terminal
 
 
 
 
-🔐 Your Architect Credentials
+<span id="ch1.intro8"  lang="pt" hist="vertrex-bank">> [!NOTE]
+> Aviso: Este laboratório destina-se a fins educativos e não a fornecer instruções sobre como configurar um ambiente de produção para um "banco". A maioria das decisões tomadas tem em conta as limitações e a finalidade deste ambiente.</span>
+
+
+
+
+🔐 Suas Credenciais de Arquiteto
 =============================
 
-For your records, your Architect Credentials are as follows:
-</span>
+Para o seu registro, suas Credenciais de Arquiteto são as seguintes:</span>
 
 
 <span id="assignment.10" lang="nolang" no>Username</span>:
@@ -240,233 +231,205 @@ admin
 </div>
 
 
-<span id="assignment.3" lang=en>
+<span id="assignment.3" lang=pt> [!NOTE]
+> As interfaces utilizam certificados autoassinados. Aceite o aviso de segurança do navegador quando este aparecer. Se uma página não carregar de imediato, o ambiente do laboratório pode ainda estar a arrancar. Aguarde um minuto e atualize o separador.
 
 > [!NOTE]
-> The UIs use self-signed certificates. Accept the browser security warning when it appears. If a page does not load right away, the lab environment may still be booting. Wait a minute and refresh the tab.
-
-> [!NOTE]
-> If you prefer to work in your own browser instead of the embedded tabs, the lab host is reachable directly at:
-> <a href="https://kvm-host.[[ Instruqt-Var key="_SANDBOX_ID" hostname="kvm-host" ]].instruqt.io:8443">https://kvm-host.[[ Instruqt-Var key="_SANDBOX_ID" hostname="kvm-host" ]].instruqt.io:8443</a>
+> Se preferir trabalhar no seu próprio navegador em vez dos separadores incorporados, o host do laboratório está acessível diretamente em:
+> https://kvm-host.[[ Instruqt-Var key="_SANDBOX_ID" hostname="kvm-host" ]].instruqt.io:8443
 
 
 
 
-📊 Task 1: Log in and inspect the unified dashboard
+📊 Tarefa 1: Iniciar sessão e inspecionar o painel unificado
 ===================================================
 
-Navigate to the </span> [button label="SUSE Virtualization UI" variant="success"](tab-0) <span id="assignment.4" lang=en> tab and log in using your credentials.
+Navegue até ao</span> [button label="SUSE Virtualization UI" variant="success"](tab-0) <span id="assignment.4" lang=ptaba e faça login com as suas credenciais.
 
 ![01-connect_to_cluster.gif](../assets/chapter1-connect_to_cluster.gif)
 
-Take a moment to look at the main </span>  <span id="assignment.5" lang="nolang" no>**Dashboard**</span><span id="assignment.6" lang=en>: this is your command center for the entire mission.
-
-
-> [!NOTE]
-> Don't make any changes yet. We are just getting familiar with the environment.
-
-
-- The first section contains the overall numbers:
-  - **<span id="assignment.6.1" lang="nolang" no>Hosts</span>** the cluster is made of
-  - **<span id="assignment.6.2" lang="nolang" no>Virtual Machines</span>** (running and stopped)
-  - **<span id="assignment.6.3" lang="nolang" no>Images</span>** available to deploy new VMs
-  - **<span id="assignment.6.4" lang="nolang" no>Volumes</span>** in use
-  - **<span id="assignment.6.5" lang="nolang" no>Disks</span>** available
-
-Clicking on each of them takes you to a dedicated section with further information. Click on **<span id="assignment.6.1" lang="nolang" no>Hosts</span>**:
-
-You see a detailed view of each host's reserved and used resources, as well as the host's IP addresses and other details.
-
-Notice the <img class="embedded_img" desc="three vertical dots" src="../assets/three_vertical_dots.png"/> at the end of each row: clicking them opens a menu with different actions for that host.
-
-Go back to the **<span id="assignment.6.6" lang="nolang" no>Dashboard</span>** and look at what else is there:
-
-- The second section, **<span id="assignment.6.7" lang="nolang" no>Capacity</span>**, lists the resources currently reserved and available in the cluster.
-
-- Below it sits a section with two tabs:
-
-  - **<span id="assignment.6.8" lang="nolang" no>Cluster Metrics</span>**: real-time metrics about the cluster; these come in handy when troubleshooting performance issues.
-
-  - **<span id="assignment.6.9" lang="nolang" no>Virtual Machine Metrics</span>**: real-time metrics for virtual machines; note that if no VM is running there is no data to show.
-
-- At the bottom, the last section, **<span id="assignment.6.10" lang="nolang" no>Events</span>**, shows the latest events happening in the cluster.
-
-Now look further around the UI. At the top right there is a drop-down menu with **All Namespaces** selected. It lets you focus on specific namespaces. Namespaces here are <span id="assignment.2.2" lang="nolang" no>Kubernetes</span> namespaces: a way to organize resources and assign dedicated permissions to everything inside them, a concept similar to a "group". At the bottom of this chapter you will find links with more information; many of the concepts you find in <span id="assignment.2.2" lang="nolang" no>Kubernetes</span> apply directly to <span id="ch1.intro1.2" lang="nolang" no>SUSE Virtualization</span>.
-
-The **bell** holds notifications and alerts, and further right the **user icon** leads you to user settings and keys for automated access.
-
-On the left side there is a column with different sections. We are not going through all of them now. You will look at many in the coming chapters. Note that these sections change depending on which plugins are enabled or disabled.
-
-Finally, in the bottom-left corner, click on **<span id="assignment.2.11" lang="nolang" no>Support</span>**.
-It takes you to a page with links to documentation and other support resources, plus two important sections:
-
-- **<span id="assignment.6.11" lang="nolang" no>Generate a <span id="assignment.2.11" lang="nolang" no>Support</span> Bundle</span>**: produces a file that helps SUSE <span id="assignment.2.11" lang="nolang" no>Support</span> troubleshoot your environment without having to access it directly.
-- **<span id="assignment.6.12" lang="nolang" no>Download KubeConfig</span>**: gives you the kubeconfig file you can use to manage this cluster with kubectl and other tools from a console.
-
-If you still have time, familiarize yourself with the sections before moving on to the next task.
-
+Reserve um momento para observar o principal</span>  <span id="assignment.5" lang="nolang" no>**Dashboard**</span><span id="assignment.6" lang=pt: este es tu centro de mando para toda la misión.
 
 > [!NOTE]
-> Everything you see in this dashboard (VMs, volumes, networks) is a <span id="assignment.2.2" lang="nolang" no>Kubernetes</span> resource under the hood. The UI is your primary tool for this mission; a terminal stands ready for the optional bonus drills, if you are curious about the machinery.
+> No hagas cambios todavía. Solo nos estamos familiarizando con el entorno.
 
+- La primera sección contiene los números generales:
+  - **<span id="assignment.6.1" lang="nolang" no>Hosts</span>** el clúster está formado por
+  - **<span id="assignment.6.2" lang="nolang" no>Virtual Machines</span>** (en ejecución y detenidas)
+  - **<span id="assignment.6.3" lang="nolang" no>Images</span>** disponibles para desplegar nuevas VMs
+  - **<span id="assignment.6.4" lang="nolang" no>Volumes</span>** en uso
+  - **<span id="assignment.6.5" lang="nolang" no>Disks</span>** disponible
 
+Al hacer clic en cada uno de ellos, accedes a una sección dedicada con más información. Haz clic en **<span id="assignment.6.1" lang="nolang" no>Hosts</span>**:
 
-🐮 Task 2: Meet Rancher Prime, the command center
+Verás una vista detallada de los recursos reservados y utilizados de cada host, así como las direcciones IP del host y otros detalles.
+
+Fíjate en el  al final de cada fila: al hacer clic en él se abre un menú con distintas acciones para ese host.
+
+Vuelve a **<span id="assignment.6.6" lang="nolang" no>Dashboard</span>** y mira qué más hay:
+
+- La segunda sección, **<span id="assignment.6.7" lang="nolang" no>Capacity</span>**, muestra los recursos actualmente reservados y disponibles en el clúster.
+
+- Debajo se encuentra una sección con dos pestañas:
+
+  - **<span id="assignment.6.8" lang="nolang" no>Cluster Metrics</span>**: métricas en tiempo real sobre el clúster; resultan muy útiles al solucionar problemas de rendimiento.
+
+  - **<span id="assignment.6.9" lang="nolang" no>Virtual Machine Metrics</span>**: métricas en tiempo real de las máquinas virtuales; ten en cuenta que si no hay ninguna VM en ejecución no habrá datos que mostrar.
+
+- En la parte inferior, la última sección, **<span id="assignment.6.10" lang="nolang" no>Events</span>**, muestra los últimos eventos que ocurren en el clúster.
+
+Ahora echa un vistazo al resto de la interfaz. En la parte superior derecha hay un menú desplegable con **All Namespaces** seleccionado. Te permite centrarte en namespaces específicos. Los namespaces aquí son namespaces de <span id="assignment.2.2" lang="nolang" no>Kubernetes</span>: una forma de organizar recursos y asignar permisos dedicados a todo lo que hay dentro de ellos, un concepto similar a un "grupo". Al final de este capítulo encontrarás enlaces con más información; muchos de los conceptos que encuentras en <span id="assignment.2.2" lang="nolang" no>Kubernetes</span> se aplican directamente a <span id="ch1.intro1.2" lang="nolang" no>SUSE Virtualization</span>.
+
+La **campana** contiene notificaciones y alertas, y más a la derecha el **icono de usuario** te lleva a la configuración de usuario y a las claves para el acceso automatizado.
+
+En el lado izquierdo hay una columna con diferentes secciones. No vamos a repasarlas todas ahora. Verás muchas de ellas en los próximos capítulos. Ten en cuenta que estas secciones cambian según qué plugins estén habilitados o deshabilitados.
+
+Por último, en la esquina inferior izquierda, haz clic en **<span id="assignment.2.11" lang="nolang" no>Support</span>**.
+Te lleva a una página con enlaces a documentación y otros recursos de soporte, además de dos secciones importantes:
+
+- **<span id="assignment.6.11" lang="nolang" no>Generate a <span id="assignment.2.11" lang="nolang" no>Support</span> Bundle</span>**: genera un archivo que ayuda a SUSE <span id="assignment.2.11" lang="nolang" no>Support</span> a solucionar problemas en tu entorno sin necesidad de acceder directamente a él.
+- **<span id="assignment.6.12" lang="nolang" no>Download KubeConfig</span>**: te proporciona el archivo kubeconfig que puedes usar para gestionar este clúster con kubectl y otras herramientas desde una consola.
+
+Si aún te queda tiempo, familiarízate con las secciones antes de pasar a la siguiente tarea.
+
+> [!NOTE]
+> Todo lo que ves en este panel (VMs, volúmenes, redes) es en realidad un recurso de <span id="assignment.2.2" lang="nolang" no>Kubernetes</span> por debajo. La interfaz es tu herramienta principal para esta misión; una terminal está lista para los ejercicios opcionales, por si tienes curiosidad sobre el funcionamiento interno.
+
+🐮 Tarea 2: Conoce Rancher Prime, el centro de mando
 =================================================
 
-The platform can also be connected to **Rancher Prime**, <span id="ch1.task2a"  lang="en" hist="vertrex-bank">and it is important to understand who does what in the bank's new world:</span>
+La plataforma también puede conectarse a **Rancher Prime**, <span id="ch1.task2a"  lang="pt" hist="vertrex-bank">e importante entender quem faz o quê no novo mundo do banco:</span>
 
-- <b class="virt"><span id="ch1.intro1.2" lang="nolang" no>SUSE Virtualization</span></b> manages the **virtual machines** on this cluster.
-- **Rancher Prime** manages **many clusters at once** (every <span id="ch1.intro1.2" lang="nolang" no>SUSE Virtualization</span> cluster in every branch datacenter), plus centralized **users, roles, and access control (<span id="assignment.6.13" lang="nolang" no>RBAC</span>)**, and the **container workloads** the bank will run alongside its VMs.
+- <span id="ch1.intro1.2" lang="nolang" no>SUSE Virtualization</span> gestiona las **máquinas virtuales** de este clúster.
+- **Rancher Prime** gestiona **muchos clústeres a la vez** (cada clúster de <span id="ch1.intro1.2" lang="nolang" no>SUSE Virtualization</span> en cada centro de datos de sucursal), además de **usuarios, roles y control de acceso centralizados (<span id="assignment.6.13" lang="nolang" no>RBAC</span>)**, y las **cargas de trabajo de contenedores** que el banco ejecutará junto a sus VMs.
 
-Let's see what is inside Rancher.
+Veamos qué hay dentro de Rancher.
 
-Open the [button label="Rancher Prime UI" variant="success"](tab-2), log in with the same credentials, and select **Virtualization Management** from the left menu.
+Abre [button label="Rancher Prime UI" variant="success"](tab-2), inicia sesión con las mismas credenciales y selecciona **Virtualization Management** en el menú izquierdo.
 
-<div style='align: middle; margin: 15px;'>
-  <img class="animatedgif" src="../assets/chapter1-import_harvester.gif"/>
-</div>
+Desde aquí puedes gestionar varios clústeres de <span id="ch1.intro1.2" lang="nolang" no>SUSE Virtualization</span>. Importa el existente:
 
-From here you can manage multiple <span id="ch1.intro1.2" lang="nolang" no>SUSE Virtualization</span> clusters. Import the existing one:
-
-1. Click **Import Existing**
-2. Set the **Cluster Name** to
-<div class="cred">
+1. Haz clic en **Import Existing**
+2. Establece el **Cluster Name** como
 
 ```txt
 mysusevirt1
 ```
 
-</div>
+3. Haz clic en **Create**
+4. Aparece una nueva pantalla. En ella se muestra una url, copia esa url para los siguientes pasos.
+5. Debajo puedes ver las instrucciones de registro. Síguelas y recuerda seleccionar **<span id="assignment.6.14" lang="nolang" no>Insecure Skip TLS Verify</span>** al editar el ajuste cluster-registration-url. Esto debe hacerse en [button label="SUSE Virtualization UI" variant="success"](tab-0).
 
-3. Click **Create**
-4. A new screen appears. On it a url shows up, copy that url for the next steps.
-5. Below it you can see the registration instructions. Follow them, and remember to select **<span id="assignment.6.14" lang="nolang" no>Insecure Skip TLS Verify</span>** when editing the <b class="highlightcopy">cluster-registration-url</b> setting. This should be done in [button label="SUSE Virtualization UI" variant="success"](tab-0).
+6. Vuelve a [button label="Rancher Prime UI" variant="success"](tab-2) y haz clic en "<span id="assignment.2.1" lang="nolang" no>Harvester</span> Clusters" en la parte superior izquierda de la interfaz.
 
-6. Switch back to [button label="Rancher Prime UI" variant="success"](tab-2) and click on "<span id="assignment.2.1" lang="nolang" no>Harvester</span> Clusters" on the top left of the UI.
+Fíjate en el estado junto al nombre del clúster: **<span id="assignment.6.15" lang="nolang" no>Pending</span>**. Está esperando a que el clúster finalice el proceso de registro.
 
-Notice the state next to the cluster name: **<span id="assignment.6.15" lang="nolang" no>Pending</span>**. It is waiting for the cluster to finish the registration process.
+Permanece en la interfaz de Rancher y observa cómo el estado cambia de **<span id="assignment.6.15" lang="nolang" no>Pending</span>** a **<span id="assignment.6.16" lang="nolang" no>Waiting</span>**, y finalmente a **<span id="assignment.6.17" lang="nolang" no>Active</span>**.
 
-Remain in the Rancher UI and watch the state change from **<span id="assignment.6.15" lang="nolang" no>Pending</span>** to **<span id="assignment.6.16" lang="nolang" no>Waiting</span>**, then finally to **<span id="assignment.6.17" lang="nolang" no>Active</span>**.
+Ahora vuelve a **<span id="assignment.2.1" lang="nolang" no>Harvester</span> Clusters**: el clúster aparece en la lista.
 
-Now go back to **<span id="assignment.2.1" lang="nolang" no>Harvester</span> Clusters**: the cluster appears in the list.
+Veamos qué más puedes hacer aquí. Haz clic en el  al final de la fila del clúster; se despliega un menú con algunas opciones:
 
-Let's see what else you can do here. Click the <img class="embedded_img" desc="three vertical dots" src="../assets/three_vertical_dots.png"/> at the end of the cluster's row; a menu drops down with some options:
+- **<span id="assignment.6.18" lang="nolang" no>Kubectl Shell</span>**: abre una shell conectada al clúster, donde puedes ejecutar comandos kubectl contra él.
+- **<span id="assignment.6.12" lang="nolang" no>Download KubeConfig</span>**: lo mismo que ya viste en la interfaz de <span id="ch1.intro1.2" lang="nolang" no>SUSE Virtualization</span>.
+- **<span id="assignment.6.19" lang="nolang" no>Download YAML</span>**: descarga la definición del clúster en formato YAML; puedes usarla como plantilla para importar nuevos clústeres de forma automatizada (también necesita un paso adicional en la interfaz del clúster).
 
-- **<span id="assignment.6.18" lang="nolang" no>Kubectl Shell</span>**: opens a shell connected to the cluster, where you can run kubectl commands against it.
-- **<span id="assignment.6.12" lang="nolang" no>Download KubeConfig</span>**: same as what you already saw in the <span id="ch1.intro1.2" lang="nolang" no>SUSE Virtualization</span> UI.
-- **<span id="assignment.6.19" lang="nolang" no>Download YAML</span>**: downloads the cluster definition in YAML format; you can use it as a template to import new clusters in an automated fashion (it also needs one extra step in the cluster UI).
+Por último, haz clic en el nombre del clúster
+- te lleva a la interfaz de <span id="ch1.intro1.2" lang="nolang" no>SUSE Virtualization</span> incrustada dentro de la interfaz de Rancher
+- Fíjate en la columna izquierda que aparece una entrada '<span id="assignment.6.13" lang="nolang" no>RBAC</span>' en el menú, podemos controlar quién puede hacer qué en nuestros clústeres.
 
-Finally, click on the cluster name itself
-- it takes you to the <span id="ch1.intro1.2" lang="nolang" no>SUSE Virtualization</span> UI embedded within the Rancher UI
-- Notice on the left column a '<span id="assignment.6.13" lang="nolang" no>RBAC</span>' entry appears on the menu, we can control who can do what on our clusters.
-
-
-With Rancher you can easily operate multiple clusters from one place.
-
-
+Con Rancher puedes operar fácilmente varios clústeres desde un solo lugar.
 
 > [!NOTE]
-> There is a dedicated rodeo for SUSE Rancher Prime, feel free to join!
+> Hay un rodeo dedicado para SUSE Rancher Prime, ¡siéntete libre de unirte!
 
-
-
-⌨️ Task 3: Test your administrative terminal access
+⌨️ Tarea 3: Prueba tu acceso administrativo por terminal
 ===================================================
 
-You will spend most of this mission in the UI, <span id="ch1.task3a"  lang="en" hist="vertrex-bank">but an architect always verifies their emergency access</span>. Click on the [button label="Cluster Terminal" variant="success"](tab-1) tab and run one command to check that your connection to the underlying <span id="assignment.2.2" lang="nolang" no>Kubernetes</span> engine is active:
-
+Pasarás la mayor parte de esta misión en la interfaz, <span id="ch1.task3a"  lang="pt" hist="vertrex-bank">mas um arquiteto sempre verifica o seu acesso de emergência</span>. Haz clic en la pestaña [button label="Cluster Terminal" variant="success"](tab-1) y ejecuta un comando para comprobar que tu conexión al motor de <span id="assignment.2.2" lang="nolang" no>Kubernetes</span> subyacente está activa:
 
 ```bash,wrap,run
 kubectl --kubeconfig .rodeo/harvester-kubeconfig get VirtualMachine -A
 ```
 
-You should see the list of <span id="assignment.6.2" lang="nolang" no>Virtual Machines</span> present in every namespace.
+Deberías ver la lista de <span id="assignment.6.2" lang="nolang" no>Virtual Machines</span> presentes en cada namespace.
 
-
-
-💾 Bonus Drill: validate the distributed storage fabric (optional)
+💾 Ejercicio adicional: valida el tejido de almacenamiento distribuido (opcional)
 ====================================================================
 
-<span id="ch1.bonus1a"  lang="en" hist="vertrex-bank">A healthy storage backend is key for banking operations</span>. <b class="virt"><span id="ch1.intro1.2" lang="nolang" no>SUSE Virtualization</span></b> uses **<span id="assignment.2.7" lang="nolang" no>SUSE Storage</span>** to replicate every volume across the cluster.
+<span id="ch1.bonus1a"  lang="pt" hist="vertrex-bank">Um backend de armazenamento saudável é fundamental para as operações bancárias</span>. <span id="ch1.intro1.2" lang="nolang" no>SUSE Virtualization</span> usa **<span id="assignment.2.7" lang="nolang" no>SUSE Storage</span>** para replicar cada volumen en todo el clúster.
 
-<div style='align: middle; margin: 15px;'>
-  <img class="animatedgif" src="../assets/chapter1-longhorn-ui.gif"/>
-</div>
+La interfaz de [button label="SUSE Virtualization UI" variant="success"](tab-0) ya muestra información sobre el estado del almacenamiento, pero también es posible acceder al panel de <span id="assignment.2.7" lang="nolang" no>SUSE Storage</span> (<span id="assignment.2.8" lang="nolang" no>Longhorn</span>) habilitando las **Extension developer features**:
 
-The [button label="SUSE Virtualization UI" variant="success"](tab-0) already shows information about the storage health, but it is also possible to access the <span id="assignment.2.7" lang="nolang" no>SUSE Storage</span> (<span id="assignment.2.8" lang="nolang" no>Longhorn</span>) dashboard by enabling the **Extension developer features**:
+1. Haz clic en tu **icono de usuario** en la esquina superior derecha
+2. Selecciona **Preferences**
+3. Marca **Enable Extension developer features**
 
-1. Click on your **user icon** in the top-right corner
-2. Select **Preferences**
-3. Tick **Enable Extension developer features**
+Vuelve a **Home**, y en la esquina inferior izquierda haz clic en **<span id="assignment.2.11" lang="nolang" no>Support</span>**.
 
-Go back to **Home**, and in the bottom-left corner click on **<span id="assignment.2.11" lang="nolang" no>Support</span>**.
-
-You will now see two new sections:
+Ahora verás dos nuevas secciones:
 
 - **<span id="assignment.6.20" lang="nolang" no>Access Embedded</span> Rancher UI**
 - **<span id="assignment.6.20" lang="nolang" no>Access Embedded</span> <span id="assignment.2.7" lang="nolang" no>SUSE Storage</span> (<span id="assignment.2.8" lang="nolang" no>Longhorn</span>) UI**
 
-Click on the **<span id="assignment.2.8" lang="nolang" no>Longhorn</span> UI** section.
+Haz clic en la sección de la **interfaz de <span id="assignment.2.8" lang="nolang" no>Longhorn</span>**.
 
-It will take you to the <span id="assignment.2.7" lang="nolang" no>SUSE Storage</span> <span id="assignment.6.6" lang="nolang" no>Dashboard</span>, all should be green.
-If a node were unschedulable or a volume degraded, <span id="assignment.2.7" lang="nolang" no>SUSE Storage</span> would already be rebuilding replicas elsewhere, but you always confirm your ground truth.
+Te llevará al **<span id="assignment.6.6" lang="nolang" no>Dashboard</span>** de <span id="assignment.2.7" lang="nolang" no>SUSE Storage</span>, todo debería estar en verde.
+Si un nodo no fuera programable o un volumen estuviera degradado, <span id="assignment.2.7" lang="nolang" no>SUSE Storage</span> ya estaría reconstruyendo réplicas en otro lugar, pero tú siempre confirmas tu verdad sobre el terreno.
 
-
-🏋️ Bonus Drills: for the command-line curious (optional)
+🏋️ Ejercicios adicionales: para los curiosos de la línea de comandos (opcional)
 ==========================================================
 
-New to <span id="assignment.2.2" lang="nolang" no>Kubernetes</span>? **Skip ahead freely**: everything that matters is in the UI. If you want to peek at the machinery, run these extra checks in the [button label="Cluster Terminal" variant="success"](tab-1):
+¿Eres nuevo en <span id="assignment.2.2" lang="nolang" no>Kubernetes</span>? **Salta esta parte sin problema**: todo lo que importa está en la interfaz. Si quieres echar un vistazo al funcionamiento interno, ejecuta estas comprobaciones adicionales en [button label="Cluster Terminal" variant="success"](tab-1):
 
-- **See the <span id="assignment.2.2" lang="nolang" no>Kubernetes</span> control plane and CoreDNS endpoints:**
+- **Ver el plano de control de <span id="assignment.2.2" lang="nolang" no>Kubernetes</span> y los endpoints de CoreDNS:**
 
 ```bash,wrap,run
 kubectl cluster-info --kubeconfig .rodeo/harvester-kubeconfig
 ```
 
-- **Check cluster component health**: query the control plane's health endpoint; every check (etcd, informers, shutdown hooks) should report `ok`:
+- **Comprueba el estado de los componentes del clúster**: consulta el endpoint de salud del plano de control; cada comprobación (etcd, informers, shutdown hooks) debería indicar `ok`:
 
 ```bash,wrap,run
 kubectl get --raw='/readyz?verbose' --kubeconfig .rodeo/harvester-kubeconfig
 ```
 
-- **Confirm every node in the fabric is ready:**
+- **Confirma que todos los nodos del tejido están listos:**
 
 ```bash,wrap,run
 kubectl get nodes --kubeconfig .rodeo/harvester-kubeconfig
 ```
 
-  All nodes should show `Ready`.
+  Todos los nodos deberían mostrar `Ready`.
 
-- **Verify the core virtualization services are running:**
+- **Verifica que los servicios principales de virtualización están en ejecución:**
 
 ```bash,wrap,run
 kubectl get pods -n harvester-system --kubeconfig .rodeo/harvester-kubeconfig | grep -v Completed
 ```
 
-  All pods should be `Running`.
+  Todos los pods deberían estar `Running`.
 
-- **Confirm the exact platform version the bank is running:**
+- **Confirma la versión exacta de la plataforma que el banco está ejecutando:**
 
 ```bash,wrap,run
 kubectl --kubeconfig .rodeo/harvester-kubeconfig get settings.harvesterhci.io server-version
 ```
 
-💼 Why does this matter?
+💼 ¿Por qué es esto importante?
 ==============================================
 
-- **One command center.** VMs, storage, and networking are visible from a single dashboard, no more juggling three separate management consoles with three separate licenses.
-- **<span id="assignment.2.2" lang="nolang" no>Kubernetes</span>-native from day one.** Everything in the dashboard is a <span id="assignment.2.2" lang="nolang" no>Kubernetes</span> resource under the hood. The container team's existing skills transfer directly, while the VM team gets a friendly point-and-click UI.
-- **Fleet management and <span id="assignment.6.13" lang="nolang" no>RBAC</span> included.** Rancher Prime is <span id="ch1.why1"  lang="en" hist="vertrex-bank">ready to command every cluster the bank will ever run, with one login and one set of access rules.</span>
-- **Distributed storage out of the box.** <span id="assignment.2.7" lang="nolang" no>SUSE Storage</span> replicates data across nodes automatically.
+- **Un único centro de mando.** Las VMs, el almacenamiento y las redes son visibles desde un único panel, ya no hay que hacer malabares con tres consolas de gestión separadas y tres licencias distintas.
+- **Nativo de <span id="assignment.2.2" lang="nolang" no>Kubernetes</span> desde el primer día.** Todo lo que hay en el panel es en realidad un recurso de <span id="assignment.2.2" lang="nolang" no>Kubernetes</span> por debajo. Las habilidades existentes del equipo de contenedores se transfieren directamente, mientras que el equipo de VMs obtiene una interfaz amigable de apuntar y hacer clic.
+- **Gestión de flotas y <span id="assignment.6.13" lang="nolang" no>RBAC</span> incluidos.** Rancher Prime es <span id="ch1.why1"  lang="pt" hist="vertrex-bank">pronto para comandar todos os clusters que o banco algum dia vier a executar, com um único login e um único conjunto de regras de acesso.</span>
+- **Almacenamiento distribuido de serie.** <span id="assignment.2.7" lang="nolang" no>SUSE Storage</span> replica los datos entre nodos automáticamente.
 
-Once you confirm the control plane is responding, the storage is healthy, and your administrative access is secured, you are ready to proceed deeper into the facility.
+Una vez que confirmes que el plano de control responde, que el almacenamiento está en buen estado y que tu acceso administrativo está asegurado, estarás listo para adentrarte más en las instalaciones.
 
-Click **Check** to descend into the datacenter. 🛗
+Haz clic en **Check** para descender al centro de datos. 🛗
 
-📚 More information
-===================
-</span>
+📚 Más información
+===================</span>
 
 
 - [<span id="ch1.intro1.2" lang="nolang" no>SUSE Virtualization</span>: Overview](https://documentation.suse.com/cloudnative/virtualization/latest/en/introduction/overview.html)
