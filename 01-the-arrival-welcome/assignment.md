@@ -244,11 +244,11 @@ admin
 📊 Tarefa 1: Iniciar sessão e inspecionar o painel unificado
 ===================================================
 
-Navegue até ao</span> [button label="SUSE Virtualization UI" variant="success"](tab-0) <span id="assignment.4" lang=ptaba e faça login com as suas credenciais.
+Navegue até ao</span> [button label="SUSE Virtualization UI" variant="success"](tab-0) <span id="assignment.4" lang="pt">aba e faça login com as suas credenciais.
 
 ![01-connect_to_cluster.gif](../assets/chapter1-connect_to_cluster.gif)
 
-Reserve um momento para observar o principal</span>  <span id="assignment.5" lang="nolang" no>**Dashboard**</span><span id="assignment.6" lang=pt: este es tu centro de mando para toda la misión.
+Reserve um momento para observar o principal</span>  <span id="assignment.5" lang="nolang" no>**Dashboard**</span><span id="assignment.6" lang="pt">: este es tu centro de mando para toda la misión.
 
 > [!NOTE]
 > No hagas cambios todavía. Solo nos estamos familiarizando con el entorno.
