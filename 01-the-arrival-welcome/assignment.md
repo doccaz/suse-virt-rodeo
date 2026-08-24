@@ -231,7 +231,7 @@ admin
 </div>
 
 
-<span id="assignment.3" lang=pt> [!NOTE]
+<span id="assignment.3" lang=pt>> [!NOTE]
 > As interfaces utilizam certificados autoassinados. Aceite o aviso de segurança do navegador quando este aparecer. Se uma página não carregar de imediato, o ambiente do laboratório pode ainda estar a arrancar. Aguarde um minuto e atualize o separador.
 
 > [!NOTE]

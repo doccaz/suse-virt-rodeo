@@ -3,7 +3,7 @@ slug: the-unthinkable-error-snapshots
 id: nkrkc4vyyywt
 type: challenge
 title: '<span id="assignment.116" lang="pt" hist="vertrex-bank">⏪ Capítulo 6: O Erro Impensável</span>'
-teaser: <span id="assignment.117" lang="pt" hist="vertrex-bank">Um cursor escorregado acabou de apagar um registro de acordo de 100 milhões. Volte no tempo com snapshots de VM, verifique a recuperação em um clone de staging seguro e, em seguida, torne a proteção permanente com backups agendados fora do cluster.</span>
+teaser: <span id="assignment.117" lang="pt" hist="vertrex-bank">Um cursor escorregado apagou um registro de acordo de 100 milhões de dólares. Volte no tempo com snapshots de VM, confirme a recuperação em um clone seguro e torne a proteção permanente com backups fora do cluster.</span>
 tabs:
 - id: lygpkmkmyndn
   title: SUSE Virtualization UI
