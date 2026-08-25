@@ -2,8 +2,8 @@
 slug: the-unthinkable-error-snapshots
 id: nkrkc4vyyywt
 type: challenge
-title: '<span id="assignment.116" lang="pt" hist="vertrex-bank">⏪ Capítulo 6: O Erro Impensável</span>'
-teaser: <span id="assignment.117" lang="pt" hist="vertrex-bank">Um cursor escorregado apagou um registro de acordo de 100 milhões de dólares. Volte no tempo com snapshots de VM, confirme a recuperação em um clone seguro e torne a proteção permanente com backups fora do cluster.</span>
+title: '<span id="assignment.116" lang="pt-br" hist="vertrex-bank">⏪ Capítulo 6: O Erro Inconcebível</span>'
+teaser: <span id="assignment.117" lang="pt-br" hist="vertrex-bank">Um cursor escorregou e apagou um registro de liquidação de US$ 100 milhões. Volte no tempo com snapshots de VM, verifique a recuperação em um clone de staging seguro e, em seguida, torne a proteção permanente com backups agendados fora do cluster.</span>
 tabs:
 - id: lygpkmkmyndn
   title: SUSE Virtualization UI
@@ -26,7 +26,7 @@ difficulty: intermediate
 timelimit: 3600
 enhanced_loading: null
 ---
-<span id="assignment.118" lang="pt" hist="vertrex-bank">⏪ Capítulo 6: <span id="assignment.118.1" lang="pt" no>O Erro Impensável</span>
+<span id="assignment.118" lang="pt-br" hist="vertrex-bank">⏪ Capítulo 6: <span id="assignment.118.1" lang="pt-br" no>O Erro Impensável</span>
 ===================================</span>
 
 <style type="text/css">
@@ -137,37 +137,37 @@ enhanced_loading: null
 
 <div id="601" class="story">
 
-<span id="assignment.119" lang="pt" hist="vertrex-bank">Na manhã seguinte, o silêncio exausto do turno da noite é abruptamente quebrado por um palavrão abafado vindo da mesa do administrador júnior de banco de dados.
+<span id="assignment.119" lang="pt-br" hist="vertrex-bank">Na manhã seguinte, o silêncio exausto do turno da noite é bruscamente interrompido por um palavrão abafado vindo da mesa do administrador júnior de banco de dados.
 
-Você e Sarah vão até lá imediatamente. O administrador júnior está encarando a tela com horror absoluto, as mãos tremendo sobre o teclado. Enquanto tentava limpar arquivos temporários obsoletos no servidor primário de registro de transações, o cursor dele escorregou. Ele executou acidentalmente um comando de exclusão recursiva no diretório errado.
+Você e Sarah vão até lá imediatamente. O administrador júnior está olhando para a tela em completo horror, as mãos tremendo sobre o teclado. Ao tentar limpar arquivos temporários obsoletos no servidor primário de livro-razão de transações, o cursor dele escorregou. Ele executou acidentalmente um comando de exclusão recursiva no diretório errado.
 
 Um registro de liquidação de transação corporativa de cem milhões de dólares, finalizado apenas momentos antes, foi completamente apagado do disco.
 
 *"Eu destruí,"* sussurra o administrador, trêmulo. *"A execução da fita de backup só acontece à meia-noite. Os dados simplesmente sumiram."*
 
-Sarah fecha os olhos, esfregando as têmporas, se preparando para o impacto devastador que isso terá no preço das ações do banco e em sua reputação. Mas você coloca uma mão firme no ombro do administrador.
+Sarah fecha os olhos, esfregando as têmporas, se preparando para o impacto devastador que isso terá no preço das ações e na reputação do banco. Mas você coloca uma mão firme no ombro do administrador.
 
-*"Os dados não sumiram,"* você diz calmamente. *"Nossa nova arquitetura de armazenamento depende de snapshots distribuídos em nível de bloco. Eu tirei uma captura do estado de referência pouco antes do início do turno da manhã."*
+*"Os dados não sumiram,"* você diz com calma. *"Nossa nova arquitetura de armazenamento depende de snapshots distribuídos em nível de bloco. Eu tirei uma captura de estado de referência bem antes do início do turno da manhã."*
 
-Você se aproxima do terminal dele. É hora de voltar no tempo. Mas é preciso ter cuidado: você quer **verificar os dados restaurados em um ambiente isolado seguro antes de sobrescrever a produção**.</span>
+Você se aproxima do terminal dele. É hora de voltar no tempo. Mas você precisa ter cuidado: quer **verificar os dados restaurados em um ambiente isolado seguro antes de sobrescrever a produção**.</span>
 
 </div>
 
-<span id="assignment.120" lang="pt" no>## 🎯 Objetivos da Sua Missão
+<span id="assignment.120" lang="pt-br" no>## 🎯 Seus Objetivos da Missão
 
-1. Simular a criação e destruição do registo
-2. Clonar um ambiente de staging a partir do snapshot
-3. Verificar os dados no sandbox de staging
-4. Restaurar o sistema de produção
-5. Ligar o <span id="assignment.120.1" lang="nolang" hist="vertrex-bank">bank's off-cluster backup vault</span>
-6. Agendar os backups
+1. Simule a criação e a destruição do registro
+2. Clone um ambiente de staging a partir do snapshot
+3. Verifique os dados na sandbox de staging
+4. Restaure o sistema de produção
+5. Conecte o <span id="assignment.120.1" lang="nolang" hist="vertrex-bank">bank's off-cluster backup vault</span>
+6. Coloque os backups em uma programação
 
 
 
 🔐 Credenciais de Login
 ====================
 
-A UI do <span id="assignment.69.1" lang="nolang" no>**SUSE Virtualization**</span> e a UI do **Rancher Prime** usam as mesmas credenciais.</span>
+A interface do <span id="assignment.69.1" lang="nolang" no>**SUSE Virtualization**</span> e a interface do **Rancher Prime** usam as mesmas credenciais.</span>
 
 <span id="assignment.70" lang="nolang" no>Username:</span>
 
@@ -191,29 +191,29 @@ admin
 
 
 
-<span id="assignment.121" lang="pt" no>💥 Tarefa 1: Simule a criação e destruição do registo
+<span id="assignment.121" lang="pt-br" no>💥 Tarefa 1: Simule a criação e destruição do registro
 ==============================================================
 
 
   
 
 
-Vai reproduzir você mesmo os eventos desta manhã, para compreender exatamente o que o snapshot protege.
+Você reproduzirá os eventos desta manhã por conta própria, para entender exatamente o que o snapshot protege.
 
-No</span> [button label="Cluster Terminal" variant="success"](tab-1) <span id="assignment.122" lang="pt" no>, inicie sessão na máquina virtual (pode demorar alguns minutos até a VM arrancar):
+No</span> [button label="Cluster Terminal" variant="success"](tab-1) <span id="assignment.122" lang="pt-br" no>, faça login na máquina virtual (pode levar alguns minutos até a VM iniciar):
 
 ```bash,wrap,run
 while [[ "${IPA}" ==  "" ]]; do IPA=`kubectl --kubeconfig .rodeo/harvester-kubeconfig get vmi core-services -n prod -o jsonpath='{.status.interfaces[0].ipAddress}'|grep -v ':'`; sleep 5; echo -n '.'; done ; while [[ "$?" != "0" ]] ; do ssh -T -o StrictHostKeyChecking=accept-new sles@${IPA} 2>/dev/null ; sleep 5; done ; ssh -o StrictHostKeyChecking=accept-new sles@${IPA}
 
 ```
 
-Gere o registo de transação altamente sensível no disco escrevendo exatamente isto:
+Gere o registro de transação altamente sensível no disco digitando exatamente isto:
 
 ```bash,wrap,run
 echo "CLIENT: BRUCE WAYNE | AMOUNT: 100,000,000 | STATUS: CLEARED" > /home/sles/ledger.txt
 ```
 
-**Agora capture a linha de base.** Mude para o</span> [button label="SUSE Virtualization UI" variant="success"](tab-0) <span id="assignment.123" lang="pt" no>1. Navegue hasta <span id="assignment.40.2" lang="nolang" no>**Virtual Machines**</span> y, a continuación, localice la siguiente VM y haga clic en el botón situado junto a ella:</span>
+**Agora capture a linha de base.** Mude para o</span> [button label="SUSE Virtualization UI" variant="success"](tab-0) <span id="assignment.123" lang="pt-br" no>1. Navegue até <span id="assignment.40.2" lang="nolang" no>**Virtual Machines**</span>, depois localize a seguinte VM e clique no botão ao lado dela:</span>
 
 <div class="cred">
 
@@ -222,8 +222,8 @@ core-services
 ```
 
 </div>
-<span id="assignment.124" lang="pt" no>2. Clique em <span id="assignment.124.1" lang="nolang" no>**Take Virtual Machine Snapshot**</span>
-3. Nomeie-o:</span>
+<span id="assignment.124" lang="pt-br" no>2. Clique em <span id="assignment.124.1" lang="nolang" no>**Take Virtual Machine Snapshot**</span>
+3. Nomeie como:</span>
 
 <div class="cred">
 
@@ -233,15 +233,17 @@ pre-disaster-backup
 
 </div>
 
-<span id="assignment.125" lang="pt" no>4. Clique em <span id="assignment.19.3" lang="nolang" no>**Create**</span>
+<span id="assignment.125" lang="pt-br" no>4. Clique em <span id="assignment.19.3" lang="nolang" no>**Create**</span>
 
-5. Navegue até <span id="assignment.125.1" lang="nolang" no>**Backup and Snapshots**</span>, depois clique em <span id="assignment.125.2" lang="nolang" no>**Virtual Machine Snapshots**</span> e aguarde até que o que acabámos de criar tenha o estado <span id="assignment.125.3" lang="nolang" no>**Ready**</span>: o ponto de rollback está definido</span> [button label="Cluster Terminal" variant="success"](tab-1) <span id="assignment.126" lang="pt" no>e simule o erro terrível do administrador júnior:
+5. Navegue até <span id="assignment.125.1" lang="nolang" no>**Backup and Snapshots**</span>, depois clique em <span id="assignment.125.2" lang="nolang" no>**Virtual Machine Snapshots**</span> e aguarde até que a que acabamos de criar tenha o estado <span id="assignment.125.3" lang="nolang" no>**Ready**</span>: o ponto de rollback está definido
+
+Retorne para o</span> [button label="Cluster Terminal" variant="success"](tab-1) <span id="assignment.126" lang="pt-br" no>e simule o erro terrível do administrador júnior:
 
 ```bash,run
 rm -f /home/sles/ledger.txt
 ```
 
-Cem milhões de dólares, perdidos do disco. Saia do console da VM:
+Cem milhões de dólares, sumidos do disco. Saia do console da VM:
 
 ```bash,run
 exit
@@ -255,13 +257,13 @@ exit
   
 
 
-Em vez de restaurar imediatamente a produção, você criará um **clone** para verificar os dados primeiro; a recuperação não destrutiva é sempre recomendada.
+Em vez de restaurar a produção imediatamente, você vai construir um **clone** para verificar os dados primeiro; a recuperação não destrutiva é sempre recomendada.
 
-No</span> [button label="SUSE Virtualization UI" variant="success"](tab-0) <span id="assignment.127" lang="pt" no>1. Navegue até <span id="assignment.125.1" lang="nolang" no>**Backup and Snapshots**</span> e, em seguida, clique em <span id="assignment.125.2" lang="nolang" no>**Virtual Machine Snapshots**</span>
+No</span> [button label="SUSE Virtualization UI" variant="success"](tab-0) <span id="assignment.127" lang="pt-br" no>1. Navegue até <span id="assignment.125.1" lang="nolang" no>**Backup and Snapshots**</span> e clique em <span id="assignment.125.2" lang="nolang" no>**Virtual Machine Snapshots**</span>
 
 2. Clique no snapshot <span id="assignment.127.1" lang="nolang" no>**pre-disaster-backup**</span>:
 
-3. Clique no ícone ao lado dele e selecione <span id="assignment.127.2" lang="nolang" no>**Restore New**</span>
+3. Clique no  ao lado dele e selecione <span id="assignment.127.2" lang="nolang" no>**Restore New**</span>
 
 4. Nomeie a nova máquina virtual:</span>
 
@@ -275,23 +277,24 @@ core-services-staging-verify
 </div>
 
 
-<span id="assignment.128" lang="pt" no>5. Clique <span id="assignment.19.3" lang="nolang" no>**Create**</span>
+<span id="assignment.128" lang="pt-br" no>5. Clique em <span id="assignment.19.3" lang="nolang" no>**Create**</span>
+
 
 > [!Note]
-> Devido ao hardware usado neste laboratório, este processo demorará mais do que em condições normais, por favor continue para a próxima tarefa.
+> Devido ao hardware usado neste laboratório, esse processo levará mais tempo do que em condições normais; por favor, continue para a próxima tarefa.
 
 
 
-🏦 Tarefa 3: Conectar o cofre de backup fora do cluster
+🏦 Tarefa 3: Conecte o cofre de backup fora do cluster
 ======================================================
 
 
   
 
 
-Os snapshots nos salvaram esta manhã, mas os snapshots residem no **mesmo cluster** que a carga de trabalho. Eles protegem contra erros de dedo, mas não contra danos físicos ou ataques cibernéticos. Para uma verdadeira recuperação de desastres, operamos um **cofre de backup** fora do cluster: um compartilhamento NFS num sistema de armazenamento separado. Hora de conectá-lo.
+Os snapshots nos salvaram hoje de manhã, mas os snapshots ficam no **mesmo cluster** que a carga de trabalho. Eles protegem contra dedos gordos, mas não contra danos físicos ou ataques cibernéticos. Para uma recuperação de desastres real, operamos um **cofre de backup** fora do cluster: um compartilhamento NFS em um sistema de armazenamento separado. Hora de conectá-lo.
 
-Em</span> [button label="SUSE Virtualization UI" variant="success"](tab-0) <span id="assignment.129" lang="pt" no>1. Vá até <span id="assignment.129.1" lang="nolang" no>**Advanced > Settings**</span> e localize:</span>
+No</span> [button label="SUSE Virtualization UI" variant="success"](tab-0) <span id="assignment.129" lang="pt-br" no>Vá até <span id="assignment.129.1" lang="nolang" no>**Advanced > Settings**</span> e localize:</span>
 
 <div class="cred">
 
@@ -300,7 +303,7 @@ backup-target
 ```
 
 </div>
-<span id="assignment.130" lang="pt" no>2. Clique no  na sua linha e selecione <span id="assignment.130.1" lang="nolang" no>**Edit Setting**</span>, adicione o seguinte:
+<span id="assignment.130" lang="pt-br" no>2. Clique no menu na sua linha e selecione <span id="assignment.130.1" lang="nolang" no>**Edit Setting**</span>, adicione o seguinte:
 
 - <span id="assignment.110.2" lang="nolang" no>**Type**</span>: <span id="assignment.130.2" lang="nolang" no><b class="highlightcopy">NFS</b></span>
 - <span id="assignment.130.3" lang="nolang" no>**Endpoint**</span>:</span>
@@ -313,19 +316,19 @@ backup-target
 
 </div>
 
-<span id="assignment.131" lang="pt" no>3. Clique em <span id="assignment.114.7" lang="nolang" no>**Save**</span>
+<span id="assignment.131" lang="pt-br" no>3. Clique em <span id="assignment.114.7" lang="nolang" no>**Save**</span>
 
-O cluster já consegue enviar backups completos de VMs para fora do cluster, o equivalente moderno da gravação em fita à meia-noite, menos a meia-noite. Um bucket **S3** funciona igualmente bem como endpoint; numa implementação em produção, este apontaria para uma instalação fisicamente separada.
+O cluster agora pode enviar backups completos de VMs para fora do cluster, o equivalente moderno da fita rodada à meia-noite, sem a meia-noite. Um bucket **S3** funciona igualmente bem como endpoint; em uma implantação de produção, isso apontaria para uma instalação fisicamente separada.
 
 
-⏰ Tarefa 4: Agendar backups
+⏰ Tarefa 4: Agendar os backups
 ====================================</span>
 
 <div id="602" class="story">
-<span id="assignment.132" lang="pt" hist="vertrex-bank">Snapshots pontuais podem salvar o dia uma vez; a política mantém o banco seguro todos os dias depois.</span>
+<span id="assignment.132" lang="pt-br" hist="vertrex-bank">Snapshots avulsos podem salvar o dia uma vez; a política mantém o banco seguro todos os dias depois.</span>
 </div>
 
-<span id="assignment.133" lang="pt" no>Coloca o próprio core-services sob um cronograma de backup automático para que ninguém tenha de se lembrar de o fazer manualmente novamente.</span> [button label="SUSE Virtualization UI" variant="success"](tab-0) <span id="assignment.134" lang="pt" no>1. Vá até <span id="assignment.134.1" lang="nolang" no>**Backup & Snapshot > Virtual Machine Schedules**</span> e clique em <span id="assignment.134.2" lang="nolang" no>**Create schedule**</span>
+<span id="assignment.133" lang="pt-br" no>Coloque o próprio core-services sob uma programação automática de backup para que ninguém mais precise se lembrar de fazer isso manualmente.</span> [button label="SUSE Virtualization UI" variant="success"](tab-0) <span id="assignment.134" lang="pt-br" no>1. Vá para <span id="assignment.134.1" lang="nolang" no>**Backup & Snapshot > Virtual Machine Schedules**</span> e clique em <span id="assignment.134.2" lang="nolang" no>**Create schedule**</span>
 2. Defina os seguintes detalhes:
 
   - <span id="assignment.39.3" lang="nolang" no>**Namespace**</span>: <span id="assignment.55.2" lang="nolang" no><b class="highlightcopy">prod</b></span>
@@ -344,30 +347,30 @@ O cluster já consegue enviar backups completos de VMs para fora do cluster, o e
 </div>
 
 
-<span id="assignment.135" lang="pt" no>4. Clique em <span id="assignment.19.3" lang="nolang" no>**Create**</span>
+<span id="assignment.135" lang="pt-br" no>4. Clique em <span id="assignment.19.3" lang="nolang" no>**Create**</span>
 
 A partir de agora, a plataforma faz backup da VM no cofre NFS a cada cinco horas, mantém as cinco cópias mais recentes e pausa a programação se duas execuções consecutivas falharem. Configure uma vez, proteja para sempre.
 
 
 
-🔍 Tarefa 5: Verificar os dados na sandbox de staging
+🔍 Tarefa 5: Verificar os dados no sandbox de staging
 =================================================
 
 
   
 
 
-Agora que o core-services-staging-verify está em funcionamento, vamos verificar se o arquivo está lá.
+Agora que o core-services-staging-verify está em execução, vamos verificar se o arquivo está lá.
 
 Desta vez usaremos o console gráfico, já que a VM não tem rede.
 
-No</span> [button label="SUSE Virtualization UI" variant="success"](tab-0) <span id="assignment.136" lang="pt" no>1. Vá até <span id="assignment.40.2" lang="nolang" no>**Virtual Machines**</span>
-2. Clique no menu suspenso <span id="assignment.61.1" lang="nolang" no>**Console**</span> e selecione <span id="assignment.136.1" lang="nolang" no>**Open in WebVNC**</span>, uma nova janela aparecerá com o terminal, sinta-se à vontade para redimensioná-la.
+No</span> [button label="SUSE Virtualization UI" variant="success"](tab-0) <span id="assignment.136" lang="pt-br" no>1. Vá para <span id="assignment.40.2" lang="nolang" no>**Virtual Machines**</span>
+2. Clique no menu suspenso <span id="assignment.61.1" lang="nolang" no>**Console**</span> e selecione <span id="assignment.136.1" lang="nolang" no>**Open in WebVNC**</span>, uma nova janela aparecerá com o terminal, fique à vontade para redimensioná-la.
 3. Faça login usando as seguintes credenciais:
    - <span id="assignment.136.2" lang="nolang" no>**username**</span>: 'sles'
    - <span id="assignment.136.3" lang="nolang" no>**password**</span>: '1234'
 
-4. Uma vez dentro, execute o seguinte comando:</span>
+4. Depois de entrar, execute o seguinte comando:</span>
 
 
 <div class="cred">
@@ -378,17 +381,17 @@ cat /home/sles/ledger.txt
 
 </div>
 
-<span id="assignment.137" lang="pt" no>5. Deverá devolver:
+<span id="assignment.137" lang="pt-br" no>5. Deve retornar:
 
-**CLIENTE: BRUCE WAYNE | VALOR: 100.000.000 | ESTADO: LIMPO**
-
-
-O texto imprime na perfeição. <span id="assignment.137.1" lang="pt" hist="vertrex-bank">Os dados estão seguros.</span>
+**CLIENTE: BRUCE WAYNE | VALOR: 100.000.000 | STATUS: LIBERADO**
 
 
-Agora vamos eliminar o clone que já não precisamos.
+O texto é exibido perfeitamente. <span id="assignment.137.1" lang="pt-br" hist="vertrex-bank">Os dados estão seguros.</span>
 
-1. Feche a janela com a consola.
+
+Agora vamos excluir o clone que não precisamos mais.
+
+1. Feche a janela com o console.
 2. Clique no  na linha **core-services-staging-verify** e selecione <span id="assignment.137.2" lang="nolang" no>**Delete**</span>, e novamente <span id="assignment.137.2" lang="nolang" no>**Delete**</span>.
 
 
@@ -400,46 +403,46 @@ Agora vamos eliminar o clone que já não precisamos.
   
 
 
-Agora que verificou a integridade do snapshot, prossiga para restaurar o sistema de produção:
+Agora que você verificou a integridade do snapshot, prossiga para restaurar o sistema de produção:
 
-1. Vá a **<span id="assignment.6.2" lang="nolang" no>Virtual Machines</span>**
+1. Vá para **<span id="assignment.6.2" lang="nolang" no>Virtual Machines</span>**
 2. Clique no  na linha **core-services** e selecione <span id="assignment.137.3" lang="nolang" no>**Stop**</span>, e novamente <span id="assignment.74.2" lang="nolang" no>**Apply**</span>.
 3. Assim que estiver completamente parado, navegue até <span id="assignment.125.1" lang="nolang" no>**Backup and Snapshots**</span>, depois clique em <span id="assignment.125.2" lang="nolang" no>**Virtual Machine Snapshots**</span>
 
 4. Clique no snapshot **pre-disaster-backup**:
 
-5. Clique no  ao lado e selecione <span id="assignment.137.4" lang="nolang" no>**Replace Existing**</span>
+5. Clique no  ao lado dele e selecione <span id="assignment.137.4" lang="nolang" no>**Replace Existing**</span>
 
 6. Clique em <span id="assignment.19.3" lang="nolang" no>**Create**</span>
 
-A VM vai ligar-se automaticamente porque é isso que a estratégia de execução define.
+A VM ligará novamente sozinha, pois é isso que a estratégia de execução define.
 
-Opcionalmente, faça SSH novamente e execute `cat` ao ficheiro uma última vez, depois termine a sessão na VM. <span id="assignment.137.5" lang="pt" hist="vertrex-bank">O disco está de volta onde pertence.</span>
+Opcionalmente, conecte-se via SSH novamente e execute `cat` no arquivo uma última vez, depois faça logout da VM. <span id="assignment.137.5" lang="pt-br" hist="vertrex-bank">O registro voltou ao seu devido lugar.</span>
 
 
-🏋️ Desafios Bónus: veja a maquinaria por trás da rede de segurança (opcional)
+🏋️ Exercícios Bônus: veja o mecanismo por trás da rede de segurança (opcional)
 ======================================================================
 
-- **Para os curiosos da linha de comandos:** cada snapshot de VM é construído a partir de snapshots ao nível do volume, e cada um deles é um objeto de API, tal como o seu novo agendamento de backup:
+- **Para os curiosos de linha de comando:** cada snapshot de VM é construído a partir de snapshots em nível de volume, e cada um deles é um objeto de API, assim como o seu novo agendamento de backup:
 
 ```bash,wrap,run
 kubectl --kubeconfig .rodeo/harvester-kubeconfig get VirtualMachineBackup -A; kubectl --kubeconfig .rodeo/harvester-kubeconfig get volumesnapshots -A; kubectl --kubeconfig .rodeo/harvester-kubeconfig get schedulevmbackups -A
 ```
 
 > [!NOTE]
-> Certifique-se de que termina a sessão na VM antes de executar estes comandos.
+> Certifique-se de fazer logout da VM antes de executar estes comandos.
 
 
-💼 Porque é que isto importa?
+💼 Por que isso importa?
 ==============================================
 
-- **O erro humano deixa de ser catastrófico.** A recuperação passou de "esperar pelas cassetes da meia-noite e rezar" para um rollback de autosserviço de cinco minutos.
-- **Verifique antes de sobrescrever.** Restaurar para um clone significa que nunca arrisca a produção com um backup não verificado, um padrão com o qual tanto os seus auditores como os seus administradores juniores dormirão melhor.
-- **A proteção é agora política, não heroísmo.** Um cofre de backup NFS fora do cluster e um agendamento de backup a cada cinco horas significam que a rede de segurança se mantém sozinha a partir daqui.
+- **O erro humano deixa de ser catastrófico.** A recuperação passou de "esperar pelas fitas da meia-noite e torcer" para um rollback self-service de cinco minutos.
+- **Verifique antes de sobrescrever.** Restaurar para um clone significa que você nunca aposta a produção em um backup não verificado, um padrão que fará tanto seus auditores quanto seus administradores juniores dormirem mais tranquilos.
+- **A proteção agora é política, não heroísmo.** Um cofre de backup NFS fora do cluster e um agendamento de backup a cada cinco horas garantem que a rede de segurança funcione sozinha a partir de agora.
 
 Clique em <span id="assignment.32.1" lang="nolang" no>**Check**</span> para continuar. 🤠
 
-📚 Mais informação
+📚 Mais informações
 ===================</span>
 
 - [Virtual Machine Backup and Restore](https://documentation.suse.com/cloudnative/virtualization/latest/en/virtual-machines/backup-restore.html)

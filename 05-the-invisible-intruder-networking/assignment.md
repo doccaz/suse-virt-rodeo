@@ -2,8 +2,8 @@
 slug: the-invisible-intruder-networking
 id: 6y9uhwn9zyll
 type: challenge
-title: "<span id="assignment.100" lang="pt" hist="vertrex-bank">Capítulo 5: O Intruso Invisível</span>"
-teaser: <span id="assignment.101" lang="pt" hist="vertrex-bank">Um alerta de segurança às 2h da manhã. O servidor web público partilha uma rede plana com a base de dados mais sensível do banco. Construa um cofre definido por software e tranque a base de dados no seu interior.</span>
+title: "<span id="assignment.100" lang="pt-br" hist="vertrex-bank">🕵️ Capítulo 5: O Intruso Invisível</span>"
+teaser: <span id="assignment.101" lang="pt-br" hist="vertrex-bank">Um alerta de segurança às 2h da manhã. O servidor web público compartilha uma rede plana com o banco de dados mais sensível do banco. Construa um cofre definido por software e tranque o banco de dados dentro dele.</span>
 tabs:
 - id: 69jpoti7gjds
   title: SUSE Virtualization UI
@@ -26,7 +26,7 @@ difficulty: intermediate
 timelimit: 3000
 enhanced_loading: null
 ---
-<span id="assignment.102" lang="pt" hist="vertrex-bank">🕵️ Capítulo 5: O Intruso Invisível
+<span id="assignment.102" lang="pt-br" hist="vertrex-bank">🕵️ Capítulo 5: O Intruso Invisível
 =====================================</span>
 
 <style type="text/css">
@@ -152,39 +152,39 @@ enhanced_loading: null
 
 <div id="501" class="story">
 
-<span id="assignment.103" lang="pt" hist="vertrex-bank">São agora duas da manhã. O datacenter está silencioso, exceto pelo zumbido rítmico das ventoinhas de refrigeração. Está a beber café frio e a rever os registos diários de telemetria quando o seu ecrã pisca a vermelho. Um alerta crítico e de alta prioridade do Centro de Operações de Segurança sobrepõe-se ao seu painel de controlo.
+<span id="assignment.103" lang="pt-br" hist="vertrex-bank">São agora duas da manhã. O datacenter está silencioso, exceto pelo zumbido rítmico dos ventiladores de refrigeração. Você está tomando um café requentado e revisando os logs diários de telemetria quando sua tela pisca em vermelho. Um alerta crítico e de alta prioridade do Centro de Operações de Segurança sobrepõe seu painel.
 
-Uma verificação automática de vulnerabilidades detetou uma falha arquitetónica grave: o **servidor web** de marketing do banco, voltado para o público, encontra-se exatamente na mesma camada de rede plana que a máquina virtual altamente classificada insider-threat-db.
+Uma varredura automatizada de vulnerabilidades detectou uma falha arquitetural grave: o **servidor web** de marketing voltado para o público do banco está posicionado exatamente na mesma camada de rede plana que a máquina virtual altamente classificada insider-threat-db.
 
-Se um agente de ameaça conseguisse comprometer o site público, teria um caminho lateral direto e sem obstáculos até à base de dados de segurança interna mais sensível do banco. Numa infraestrutura tradicional, corrigir isto exigiria acordar a equipa sénior de engenharia de redes, recablear fisicamente as portas dos switches no escuro, e arriscar loops de encaminhamento catastróficos.
+Se um agente de ameaça comprometesse o site público, ele teria um caminho lateral direto e desimpedido até o banco de dados de segurança interna mais sensível do banco. Em uma infraestrutura tradicional, corrigir isso exigiria acordar a equipe sênior de engenharia de redes, recablear fisicamente as portas dos switches no escuro e arriscar loops de roteamento catastróficos.
 
-Não precisa de cabos físicos. Tem ao seu alcance o poder das **redes definidas por software**. Tem de construir um cofre digital impenetrável e trancar a base de dados lá dentro — antes que uma intrusão possa ocorrer.</span>
+Você não precisa de cabos físicos. Você tem o poder do **software-defined networking** ao seu alcance. Você deve construir um cofre digital impenetrável e trancar o banco de dados dentro dele — antes que uma intrusão possa ocorrer.</span>
 
 </div>
 
-<span id="assignment.104" lang="pt" no>## Duas camadas de rede definida por software
+<span id="assignment.104" lang="pt-br" no>## Duas camadas de rede definida por software
 
-<span id="ch1.intro1.2" lang="nolang" no>SUSE Virtualization</span> oferece o espectro completo, desde a segmentação clássica de VLAN até SDN empresarial, capacidades pelas quais o banco costumava pagar uma licença SDN separada de código fechado:
+<span id="ch1.intro1.2" lang="nolang" no>SUSE Virtualization</span> oferece todo o espectro, da segmentação clássica por VLAN até o SDN empresarial, recursos pelos quais o banco costumava pagar uma licença de SDN de código fechado separada:
 
 | Camada | Tecnologia | Uso desta noite |
 |-------|-----------|-------------|
-| L2 / bridging VLAN | **<span id="assignment.2.14" lang="nolang" no>Multus</span>** | A VLAN de cofre isolando a base de dados |
+| L2 / bridging VLAN | **<span id="assignment.2.14" lang="nolang" no>Multus</span>** | A VLAN do cofre isolando o banco de dados |
 | SDN / zonas de overlay isoladas | **<span id="assignment.2.13" lang="nolang" no>Kube-OVN</span>** | Sub-redes privadas sem caminho externo, mesmo com CIDRs sobrepostos |
 
 
 
-## 🎯 Objetivos da Sua Missão
+## 🎯 Objetivos da sua Missão
 
 1. Conectar uma rede física de circuito fechado para produção
-2. Construir uma SDN igualmente isolada para desenvolvimento
-3. Aprender a mover VMs para as novas redes
+2. Construir um SDN igualmente isolado para desenvolvimento
+3. Aprender como mover VMs para as novas redes
 
 
 
 🔐 Credenciais de Login
 ====================
 
-A UI do <span id="assignment.69.1" lang="nolang" no>**SUSE Virtualization**</span> e a UI do <span id="assignment.2.12" lang="nolang" no>**Rancher Prime**</span> usam as mesmas credenciais.</span>
+A interface do <span id="assignment.69.1" lang="nolang" no>**SUSE Virtualization**</span> e a interface do <span id="assignment.2.12" lang="nolang" no>**Rancher Prime**</span> usam as mesmas credenciais.</span>
 
 <span id="assignment.10" lang="nolang" no>Username</span>:
 
@@ -208,15 +208,15 @@ admin
 
 
 
-<span id="assignment.106" lang="pt" no>🧱 Tarefa 1: Ligar uma rede física em loop fechado
+<span id="assignment.106" lang="pt-br" no>🧱 Tarefa 1: Conectar uma rede física em loop fechado
 =================================================
 
-A nossa equipa configurou os nós <span id="ch1.intro1.2" lang="nolang" no>SUSE Virtualization</span> com uma placa de rede (NIC) dedicada adicional, ligada num loop fisicamente fechado. Vamos usá-la para o nosso tráfego mais precioso e criar uma rede de produção isolada.
+Nossa equipe configurou os nós <span id="ch1.intro1.2" lang="nolang" no>SUSE Virtualization</span> com uma NIC dedicada extra que está conectada em um loop físico fechado. Vamos usá-la para o nosso tráfego mais importante e criar uma rede de produção isolada.
 
-No</span> [button label="SUSE Virtualization UI" variant="success"](tab-0) <span id="assignment.107" lang="pt" no>, navegue hasta <span id="assignment.107.1" lang="nolang" no>**Networks**</span> en el menú de la izquierda, luego seleccione <span id="assignment.107.2" lang="nolang" no>**Cluster Network Configuration**</span>:
+No</span> [button label="SUSE Virtualization UI" variant="success"](tab-0) <span id="assignment.107" lang="pt-br" no>, navegue até <span id="assignment.107.1" lang="nolang" no>**Networks**</span> no menu à esquerda e, em seguida, selecione <span id="assignment.107.2" lang="nolang" no>**Cluster Network Configuration**</span>:
 
-1. Haga clic en <span id="assignment.107.3" lang="nolang" no>**Create a Cluster Network**</span>
-2. Configure el <span id="assignment.19.4" lang="nolang" no>**Name**</span> con:</span>
+1. Clique em <span id="assignment.107.3" lang="nolang" no>**Create a Cluster Network**</span>
+2. Defina <span id="assignment.19.4" lang="nolang" no>**Name**</span> como:</span>
 
 <div class="cred">
 
@@ -226,9 +226,9 @@ closed-loop
 
 </div>
 
-<span id="assignment.108" lang="pt" no>3. Clique em <span id="assignment.19.3" lang="nolang" no>**Create**</span>
+<span id="assignment.108" lang="pt-br" no>3. Clique em <span id="assignment.19.3" lang="nolang" no>**Create**</span>
 
-A nova rede de cluster aparece na lista. Agora atribua-lhe uma interface física: clique em <span id="assignment.108.1" lang="nolang" no>**Create Network Configuration**</span> na mesma linha da rede de cluster de circuito fechado e preencha os seguintes detalhes:
+A nova rede de cluster aparece na lista. Agora atribua a ela uma interface física: clique em <span id="assignment.108.1" lang="nolang" no>**Create Network Configuration**</span> na mesma linha da rede de cluster closed-loop e preencha os seguintes detalhes:
 
 1. Defina o <span id="assignment.19.4" lang="nolang" no>**Name**</span> como:</span>
 
@@ -240,7 +240,7 @@ closed-loop
 
 </div>
 
-<span id="assignment.109" lang="pt" no>Observe a seção <span id="assignment.27" lang="nolang" no>**Node Selector**</span>, aqui podemos especificar onde a rede estará disponível.
+<span id="assignment.109" lang="pt-br" no>Observe a seção <span id="assignment.27" lang="nolang" no>**Node Selector**</span> aqui podemos especificar onde a rede estará disponível.
 
 2. Em <span id="assignment.109.1" lang="nolang" no>**Uplink**</span>, defina <span id="assignment.109.2" lang="nolang" no>**NICs**</span> como ens5
 
@@ -251,7 +251,7 @@ closed-loop
   
 
 
-Agora defina a rede voltada para as VMs sobre ela. Selecione <span id="assignment.109.3" lang="nolang" no>**Virtual Machine Networks**</span> e clique em <span id="assignment.19.3" lang="nolang" no>**Create**</span> para definir um novo perímetro seguro:
+Agora defina a rede voltada para a VM sobre ela. Selecione <span id="assignment.109.3" lang="nolang" no>**Virtual Machine Networks**</span> e clique em <span id="assignment.19.3" lang="nolang" no>**Create**</span> para definir um novo perímetro seguro:
 
 - <span id="assignment.39.3" lang="nolang" no>**Namespace**</span>: prod
 - <span id="assignment.19.4" lang="nolang" no>**Name**</span>:</span>
@@ -264,7 +264,7 @@ secure-loop-prod
 
 </div>
 
-<span id="assignment.110" lang="pt" no>- <span id="assignment.110.1" lang="nolang" no>Basics</span>:
+<span id="assignment.110" lang="pt-br" no>- <span id="assignment.110.1" lang="nolang" no>Basics</span>:
   - <span id="assignment.110.2" lang="nolang" no>**Type**</span>: UntaggedNetwork
   - <span id="assignment.110.3" lang="nolang" no>**Cluster Network**</span>: closed-loop
 
@@ -274,14 +274,14 @@ Clique em <span id="assignment.19.3" lang="nolang" no>**Create**</span>.
   
 
 
-De volta à lista <span id="assignment.109.3" lang="nolang" no>**Virtual Machine Networks**</span>, secure-loop-prod aparece com o status <span id="assignment.110.4" lang="nolang" no>**Active**</span>.
+De volta à lista <span id="assignment.109.3" lang="nolang" no>**Virtual Machine Networks**</span>, secure-loop-prod aparece com status <span id="assignment.110.4" lang="nolang" no>**Active**</span>.
 
 
 
-🔒 Tarefa 2: Criar uma SDN de circuito fechado
+🔒 Tarefa 2: Criar uma SDN de loop fechado
 ===================================
 
-Agora crie o mesmo tipo de isolamento para o ambiente de desenvolvimento. <span id="assignment.110.5" lang="pt" hist="vertrex-bank">Adicionar novas placas de rede e cablagem é caro; um ambiente de desenvolvimento não precisa de tantos recursos dedicados, por isso desta vez vais usar uma **rede definida por software**.</span>
+Agora crie o mesmo tipo de isolamento para o ambiente de desenvolvimento. <span id="assignment.110.5" lang="pt-br" hist="vertrex-bank">Adicionar novas NICs e cabeamento é caro; um ambiente de desenvolvimento não precisa de tantos recursos dedicados, então desta vez você usará uma **rede definida por software**.</span>
 
 
   
@@ -300,7 +300,7 @@ secure-loop-dev
 
 </div>
 
-<span id="assignment.111" lang="pt" no>- <span id="assignment.110.1" lang="nolang" no>Basics</span>:
+<span id="assignment.111" lang="pt-br" no>- <span id="assignment.110.1" lang="nolang" no>Basics</span>:
   - <span id="assignment.110.2" lang="nolang" no>**Type**</span>: OverlayNetwork
 
 Clique em <span id="assignment.19.3" lang="nolang" no>**Create**</span>.
@@ -309,7 +309,7 @@ Clique em <span id="assignment.19.3" lang="nolang" no>**Create**</span>.
   
 
 
-Agora crie a sub-rede SDN. Vá para <span id="assignment.111.1" lang="nolang" no>**Virtual Private Cloud**</span> e, na aba da Virtual Private Cloud ovn-cluster, clique em <span id="assignment.111.2" lang="nolang" no>**Create Subnet**</span>, depois preencha os seguintes detalhes:
+Agora crie a sub-rede SDN. Vá até <span id="assignment.111.1" lang="nolang" no>**Virtual Private Cloud**</span> e, na aba da Virtual Private Cloud ovn-cluster, clique em <span id="assignment.111.2" lang="nolang" no>**Create Subnet**</span>, depois preencha os seguintes detalhes:
 
 - <span id="assignment.19.4" lang="nolang" no>**Name**</span>:</span>
 
@@ -321,7 +321,7 @@ secure-vpc-dev
 
 </div>
 
-<span id="assignment.112" lang="pt" no>- <span id="assignment.112.1" lang="nolang" no>Basic</span>:
+<span id="assignment.112" lang="pt-br" no>- <span id="assignment.112.1" lang="nolang" no>Basic</span>:
   - <span id="assignment.112.2" lang="nolang" no>**CIDR**</span>:</span>
 
 <div class="cred">
@@ -332,8 +332,8 @@ secure-vpc-dev
 
 </div>
 
-<span id="assignment.113" lang="pt" no>- <span id="assignment.113.1" lang="nolang" no>**Provider**</span>: prod/secure-loop-dev
-- <span id="assignment.113.2" lang="nolang" no>**Gateway IP**</span>:</span>
+<span id="assignment.113" lang="pt-br" no>- <span id="assignment.113.1" lang="nolang" no>**Provider**</span>: prod/secure-loop-dev
+  - <span id="assignment.113.2" lang="nolang" no>**Gateway IP**</span>:</span>
 
 <div class="cred">
 
@@ -343,7 +343,7 @@ secure-vpc-dev
 
 </div>
 
-<span id="assignment.114" lang="pt" no>- <span id="assignment.114.1" lang="nolang" no>**Dynamic Host Configuration Protocol (DHCP)**</span>: <span id="assignment.114.2" lang="nolang" no><b class="highlightcopy">Enabled</b></span>
+<span id="assignment.114" lang="pt-br" no>- <span id="assignment.114.1" lang="nolang" no>**Dynamic Host Configuration Protocol (DHCP)**</span>: <span id="assignment.114.2" lang="nolang" no><b class="highlightcopy">Enabled</b></span>
   - <span id="assignment.114.3" lang="nolang" no>**Private Subnet**</span>: <span id="assignment.114.2" lang="nolang" no><b class="highlightcopy">Enabled</b></span>
 
 Clique em <span id="assignment.19.3" lang="nolang" no>**Create**</span>.
@@ -351,7 +351,7 @@ Clique em <span id="assignment.19.3" lang="nolang" no>**Create**</span>.
 Agora você pode atribuir a rede prod/secure-loop-dev a qualquer VM, e ela só poderá se comunicar com as VMs na mesma rede.
 
 
-Se tiver curiosidade em ver a topologia na aba da Virtual Private Cloud ovn-cluster, clique em <span id="assignment.114.4" lang="nolang" no>**Topology**</span>, o que é especialmente útil ao ter múltiplas sub-redes,
+Se tiver curiosidade em ver a topologia na aba da Virtual Private Cloud ovn-cluster, clique em <span id="assignment.114.4" lang="nolang" no>**Topology**</span>, isso é especialmente útil quando há múltiplas sub-redes,
 
 
 🎯 Tarefa 3: Configurar VMs com as novas redes
@@ -364,17 +364,17 @@ Você tem duas novas redes isoladas. Agora é hora de mostrar aos seus colegas c
   
 
 
-<span id="assignment.114.5" lang="pt" hist="vertrex-bank">Você não está fazendo a alteração você mesmo, apenas explicando como isso é feito, para isso escolheremos o servidor de produção:</span>
+<span id="assignment.114.5" lang="pt-br" hist="vertrex-bank">Você não vai fazer a mudança você mesmo, é apenas para mostrar como isso é feito, para isso vamos escolher o servidor de produção:</span>
 
-Volte ao painel <span id="assignment.40.2" lang="nolang" no>**Virtual Machines**</span> e localize a máquina virtual alvo ( **webserver-prod** ):
+Retorne ao painel <span id="assignment.40.2" lang="nolang" no>**Virtual Machines**</span> e localize a máquina virtual de destino ( **webserver-prod** ):
 
 1. Clique no  na sua linha e selecione <span id="assignment.114.6" lang="nolang" no>**Edit Config**</span>
-2. Vá até a aba <span id="assignment.107.1" lang="nolang" no>**Networks**</span>
+2. Vá para a aba <span id="assignment.107.1" lang="nolang" no>**Networks**</span>
 3. Selecione a rede prod/secure-loop-prod para sistemas de produção, ou prod/secure-loop-dev para sistemas de desenvolvimento
 4. Clique em <span id="assignment.114.7" lang="nolang" no>**Save**</span>
 5. Clique no  novamente e selecione <span id="assignment.114.8" lang="nolang" no>**Restart**</span>
 
-A VM inicia conectada à nova rede. Não espere que ela termine.
+A VM é iniciada conectada à nova rede. Não espere que ela termine.
 
 
 
@@ -386,9 +386,9 @@ A VM inicia conectada à nova rede. Não espere que ela termine.
 🏋️ Exercícios Bônus: para os curiosos de linha de comando (opcional)
 ==========================================================
 
-Novo em <span id="assignment.2.2" lang="nolang" no>Kubernetes</span>? **Pule à vontade**: já temos as redes isoladas criadas. Estes exercícios opcionais adicionam uma rede isolada extra com ferramentas puras de <span id="assignment.2.2" lang="nolang" no>Kubernetes</span>.
+Novo em <span id="assignment.2.2" lang="nolang" no>Kubernetes</span>? **Pule à vontade**: já temos as redes isoladas criadas. Esses exercícios opcionais adicionam uma rede isolada extra com ferramentas puras de <span id="assignment.2.2" lang="nolang" no>Kubernetes</span>.
 
-**Uma rede isolada extra é necessária para o QA: políticas de rede <span id="assignment.2.2" lang="nolang" no>Kubernetes</span>.** Precisamos ser capazes de replicar essa configuração no QA para garantir que não haja surpresas ao mover para produção, aplicar uma política estrita que descarta tráfego não autorizado no nível do pod, abaixo do isolamento de VLAN. Em</span> [button label="Cluster Terminal" variant="success"](tab-1) <span id="assignment.115" lang="pt" no>, aplica una política de ingress de denegación por defecto a la secure namespace:
+**Uma rede isolada extra é necessária para o QA: políticas de rede <span id="assignment.2.2" lang="nolang" no>Kubernetes</span>.** Precisamos ser capazes de replicar essa configuração no QA para garantir que não haja surpresas ao migrar para produção, aplicando uma política estrita que descarta tráfego não autorizado no nível do pod, abaixo do isolamento de VLAN. No</span> [button label="Cluster Terminal" variant="success"](tab-1) <span id="assignment.115" lang="pt-br" no>, aplique uma política de ingress padrão de negação total (deny-all) ao namespace seguro:
 
 ```bash,run
 cat << EOF | kubectl --kubeconfig .rodeo/harvester-kubeconfig apply -f -
@@ -404,14 +404,14 @@ spec:
 EOF
 ```
 
-Confirma que la política está aplicada:
+Confirme que a política está sendo aplicada:
 
 ```bash,wrap,run
 kubectl --kubeconfig .rodeo/harvester-kubeconfig get networkpolicy -n prod
 ```
 
 
-Crea una zona completamente independiente para el equipo forense:
+Crie uma zona completamente independente para a equipe de forense:
 
 ```bash,run
 cat << EOF | kubectl --kubeconfig .rodeo/harvester-kubeconfig apply -f -
@@ -448,26 +448,26 @@ EOF
 ```
 
 > [!NOTE]
-> Cada zona obtiene su propia red dedicada (y por tanto su propio switch lógico aislado), que es lo que hace que el aislamiento sea real. <span id="assignment.2.13" lang="nolang" no>Kube-OVN</span> sigue aplicando una regla por VPC: dos subnets de la misma VPC (`ovn-cluster`) no pueden compartir CIDR, ni siquiera en redes distintas, por lo que `forensics-zone` usa un bloque diferente. Un solapamiento real de espacio de direcciones entre zonas también es posible, solo que requiere una segunda VPC personalizada, fuera del alcance de este ejercicio.
+> Cada zona recebe sua própria rede dedicada (e, portanto, seu próprio switch lógico isolado), o que é o que torna o isolamento real. <span id="assignment.2.13" lang="nolang" no>Kube-OVN</span> ainda impõe uma regra por VPC: duas sub-redes na mesma VPC (`ovn-cluster`) não podem compartilhar um CIDR, mesmo em redes diferentes, motivo pelo qual `forensics-zone` usa um bloco diferente. Uma sobreposição real de espaço de endereços entre zonas também é possível, mas exige uma segunda VPC personalizada, fora do escopo deste exercício.
 
-Verifica que ambas zonas existen con `natOutgoing: false`: sin salida, sin entrada:
+Verifique se ambas as zonas existem com `natOutgoing: false`: sem caminho de saída, sem caminho de entrada:
 
 ```bash,wrap,run
 kubectl --kubeconfig .rodeo/harvester-kubeconfig get subnets.kubeovn.io -o custom-columns=NAME:.metadata.name,CIDR:.spec.cidrBlock,PRIVATE:.spec.private,NAT:.spec.natOutgoing
 ```
 
-Dos bóvedas, dos redes privadas independientes, cero paquetes compartidos. Una VM conectada a cualquiera de las zonas puede hablar con sus vecinos en la misma subnet y con **nada más**: microsegmentación sin licencia de SDN propietaria, construida y desmontada por completo en software.
+Dois cofres, duas redes privadas independentes, zero pacotes compartilhados. Uma VM conectada a qualquer uma das zonas pode se comunicar com seus vizinhos na mesma sub-rede e com **mais nada**: microssegmentação sem licença de SDN proprietária, construída e desmontada inteiramente em software.
 
-💼 ¿Por qué importa esto?
+💼 Por que isso importa?
 ==============================================
 
-- **Segmentación a las 2 AM, en software.** Lo que antes era un proyecto de recableado con reuniones de control de cambios se convirtió en tres minutos de configuración, mientras la ventana de amenaza seguía cerrada.
-- **Defensa en profundidad por defecto.** Aislamiento VLAN en la capa 2, políticas de red en la capa de pods y subnets SDN privadas: tres muros independientes desde una sola plataforma.
-- **Evidencia de cumplimiento integrada.** Cada red, política y subnet es un objeto YAML versionable: los auditores de seguridad obtienen pruebas, no promesas.
+- **Segmentação às 2h da manhã, em software.** O que antes era um projeto de recabeamento com reuniões de controle de mudanças virou três minutos de configuração, enquanto a janela de ameaça ainda estava fechada.
+- **Defesa em profundidade por padrão.** Isolamento VLAN na camada 2, políticas de rede na camada de pods e sub-redes SDN privadas: três muralhas independentes em uma única plataforma.
+- **Evidência de conformidade embutida.** Cada rede, política e sub-rede é um objeto YAML versionável: os auditores de segurança recebem provas, não promessas.
 
-Haz clic en <span id="assignment.32.1" lang="nolang" no>**Check**</span> para continuar. ⏪
+Clique em <span id="assignment.32.1" lang="nolang" no>**Check**</span> para continuar. ⏪
 
-📚 Más información
+📚 Mais informações
 ===================</span>
 
 - [Cluster Networking](https://documentation.suse.com/cloudnative/virtualization/latest/en/networking/cluster-network.html)

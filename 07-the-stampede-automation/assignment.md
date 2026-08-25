@@ -2,8 +2,8 @@
 slug: the-stampede-automation
 id: euwnv5ojhvfl
 type: challenge
-title: "<span id="assignment.138" lang="pt" no>🤠 Capítulo 7: A Debandada</span>"
-teaser: <span id="assignment.139" lang="pt" hist="vertrex-bank">Os mercados estão em queda livre e os quants precisam que a frota de cálculo seja escalada de três nós para cinco, agora. Forje um template de VM padrão e produza máquinas idênticas sob demanda.</span>
+title: "<span id="assignment.138" lang="pt-br" no>🤠 Capítulo 7: A Debandada</span>"
+teaser: <span id="assignment.139" lang="pt-br" hist="vertrex-bank">Os mercados estão em queda livre e os quants precisam que a frota de cálculo seja escalada de três nós para cinco, agora. Forje um template de VM padrão e produza máquinas idênticas sob demanda.</span>
 tabs:
 - id: xxc2ymjtxzih
   title: SUSE Virtualization UI
@@ -26,7 +26,7 @@ difficulty: intermediate
 timelimit: 3000
 enhanced_loading: null
 ---
-<span id="assignment.140" lang="pt" no>🤠 Capítulo 7: A Debandada
+<span id="assignment.140" lang="pt-br" no>🤠 Capítulo 7: A Debandada
 ===========================</span>
 <style type="text/css">
   * {
@@ -135,32 +135,32 @@ enhanced_loading: null
 
 <div id="701" class="story">
 
-<span id="assignment.141" lang="pt" hist="vertrex-bank">Uma mudança repentina e agressiva nas taxas de juros globais lança os mercados financeiros num frenesim caótico. Os algoritmos de análise de risco do Vertex Trust Bank gritam por mais capacidade de computação para processar a torrente de dados voláteis do mercado.
+<span id="assignment.141" lang="pt-br" hist="vertrex-bank">Uma mudança repentina e agressiva nas taxas de juros globais lança os mercados financeiros em um frenesi caótico. Os algoritmos de análise de risco do Vertex Trust Bank estão implorando por mais capacidade de processamento para lidar com a enxurrada de dados voláteis do mercado que está chegando.
 
-*"Um motor de cálculo já não é suficiente!"* grita o **Chefe de Quant** pela sala, agitando um relatório impresso. *"Preciso de uma frota de cinco motores idênticos imediatamente, ou voamos às cegas para dentro deste colapso de mercado!"*
+*"Um único mecanismo de cálculo não é mais suficiente!"* grita o **Chefe de Quant** pela sala, agitando um relatório impresso. *"Preciso de uma frota de cinco mecanismos idênticos imediatamente, ou vamos voar às cegas nessa quebra de mercado!"*
 
-Construir cinco máquinas à mão, um ecrã de cada vez, convida exatamente àquilo que não podes dar-te ao luxo agora: um tamanho de memória mal digitado aqui, uma rede esquecida ali. Deriva de configuração sob pressão — e neste momento, o erro humano custa milhões de dólares **por segundo**.
+Construir cinco máquinas manualmente, uma tela de cada vez, convida exatamente o que você não pode se dar ao luxo agora: um tamanho de memória digitado errado aqui, uma rede esquecida ali. Desvio de configuração sob pressão — e agora, o erro humano custa milhões de dólares **por segundo**.
 
-Estalas os dedos. O que o banco precisa é de um **modelo dourado**: definir a máquina perfeita uma vez, depois produzir cópias idênticas a pedido.</span>
+Você estala os dedos. O que o banco precisa é de um **projeto padrão-ouro**: definir a máquina perfeita uma vez, depois produzir cópias idênticas sob demanda.</span>
 
 </div>
 
-<span id="assignment.142" lang="pt" no><span id="ch1.intro1.2" lang="nolang" no>SUSE Virtualization</span> tem exatamente isso: **Templates de VM**. Um template captura CPU, memória, discos, redes e cloud-init num único objeto versionado. Combinado com a **criação multi-instância**, um único blueprint transforma-se numa frota inteira com um único clique.
+<span id="assignment.142" lang="pt-br" no><span id="ch1.intro1.2" lang="nolang" no>SUSE Virtualization</span> tem exatamente isso: **VM Templates**. Um template captura CPU, memória, discos, redes e cloud-init em um único objeto versionado. Combinado com **criação multi-instância**, um blueprint se transforma em uma frota inteira com um único clique.
 
 
 
-## 🎯 Objetivos da Sua Missão
+## 🎯 Objetivos da sua Missão
 
 1. Forjar o template dourado
 2. Escalar a frota sob pressão
-3. Desativar a frota
+3. Encerrar a frota
 
 
 
 🔐 Credenciais de Login
 ====================
 
-A interface do <span id="assignment.69.1" lang="nolang" no>**SUSE Virtualization**</span> e a interface do **Rancher Prime** utilizam as mesmas credenciais.</span>
+A UI do <span id="assignment.69.1" lang="nolang" no>**SUSE Virtualization**</span> e a UI do **Rancher Prime** usam as mesmas credenciais.</span>
 
 <span id="assignment.70" lang="nolang" no>Username:</span>
 
@@ -184,7 +184,7 @@ admin
 
 
 
-<span id="assignment.143" lang="pt" no>📜 Tarefa 1: Forjar o modelo de ouro
+<span id="assignment.143" lang="pt-br" no>📜 Tarefa 1: Forje o modelo dourado
 ====================================
 
 
@@ -192,7 +192,7 @@ admin
 
 
 Você precisa de um modelo que acelere a implantação de máquinas virtuais e as padronize.
-Em</span> [button label="SUSE Virtualization UI" variant="success"](tab-0) <span id="assignment.144" lang="pt" no>navegue até <span id="assignment.144.1" lang="nolang" no>**Advanced > Templates**</span> e clique em <span id="assignment.19.3" lang="nolang" no>**Create**</span>, depois preencha os seguintes detalhes:
+Em</span> [button label="SUSE Virtualization UI" variant="success"](tab-0) <span id="assignment.144" lang="pt-br" no>navegue até <span id="assignment.144.1" lang="nolang" no>**Advanced > Templates**</span> e clique em <span id="assignment.19.3" lang="nolang" no>**Create**</span>, depois preencha os seguintes detalhes:
 
 - <span id="assignment.39.3" lang="nolang" no>**Namespace**</span>: prod
 - <span id="assignment.144.2" lang="nolang" no>**Template Name**</span>:</span>
@@ -205,20 +205,20 @@ prod-basic
 
 </div>
 
-<span id="assignment.145" lang="pt" no>Precisamos minimizar o uso de recursos, e todas as VMs devem ser acessíveis usando a chave SSH de produção, que é protegida com segurança.
+<span id="assignment.145" lang="pt-br" no>Precisamos minimizar o uso de recursos, e todas as VMs devem ser acessíveis usando a chave SSH de produção, que é protegida com segurança.
 
 - Básico:
   - <span id="assignment.42.1" lang="nolang" no>**CPU**</span>: 1
   - <span id="assignment.145.1" lang="nolang" no>**Memory**</span>: 1
   - <span id="assignment.45.1" lang="nolang" no>**SSHKey**</span>: prod/default
 
-O nosso sistema operativo base predefinido é o SLES 16.
+Nosso SO base padrão é o SLES 16.
 
 - <span id="assignment.6.4" lang="nolang" no>Volumes</span>:
   - <span id="assignment.45.2" lang="nolang" no>**Image**</span>: official-images/SLES-16.0-Minimal-VM.x86_64-Cloud-GM.qcow2
   - <span id="assignment.45.3" lang="nolang" no>**Size**</span>: 5
 
-Queremos que os servidores de produção disponibilizem os seus serviços na rede de serviços de produção.
+Queremos que os servidores de produção ofereçam seus serviços na rede de serviço de produção.
 
 - <span id="assignment.49.1" lang="nolang" no>Networks</span>:
   - <span id="assignment.49.2" lang="nolang" no>**Network**</span>: prod/service
@@ -227,7 +227,7 @@ Todas as VMs de produção devem ser executadas apenas em hosts prontos para pro
 
 - <span id="assignment.51.1" lang="nolang" no>Node Scheduling</span>:
   1. Selecione <span id="assignment.51.5" lang="nolang" no>**Run virtual machine on node(s) matching scheduling rules**</span>
-  2. Clique em <span id="assignment.51.6" lang="nolang" no>**Add Node Selector**</span> e depois em <span id="assignment.51.7" lang="nolang" no>**Add Rule**</span>:
+  2. Clique em <span id="assignment.51.6" lang="nolang" no>**Add Node Selector**</span>, depois em <span id="assignment.51.7" lang="nolang" no>**Add Rule**</span>:
 
 
 - <span id="assignment.51.8" lang="nolang" no>**Key**</span>:</span>
@@ -240,7 +240,7 @@ stage
 
 </div>
 
-<span id="assignment.52" lang="pt" no>- **Valor**:</span>
+<span id="assignment.52" lang="pt-br" no>Valor</span>
 
 <div class="cred">
 
@@ -251,7 +251,7 @@ prod
 </div>
 
 
-<span id="assignment.146" lang="pt" no>Queremos que as VMs estejam devidamente identificadas:
+<span id="assignment.146" lang="pt-br" no>Queremos que as VMs sejam devidamente etiquetadas:
 
 - <span id="assignment.53.1" lang="nolang" no>Labels</span>:
   - Clique em <span id="assignment.53.3" lang="nolang" no>**Add Label**</span>:
@@ -266,7 +266,7 @@ stage
 
 </div>
 
-<span id="assignment.52" lang="pt" no>- **Valor**:</span>
+<span id="assignment.52" lang="pt-br" no>Valor</span>
 <div class="cred">
 
 ```txt
@@ -276,23 +276,21 @@ prod
 </div>
 
 
-<span id="assignment.147" lang="pt" no>Finalmente, queremos que todas las máquinas de producción... espera, la traducción es al portugués.
-
-Por fim, queremos que todas as máquinas de produção estejam padronizadas em um conjunto de pacotes e configurações:
+<span id="assignment.147" lang="pt-br" no>Finalmente, queremos padronizar todas as máquinas de produção em um conjunto de pacotes e configurações:
 
 - <span id="assignment.54.1" lang="nolang" no>Advanced Options</span>:
   - <span id="assignment.54.4" lang="nolang" no>**User Data Template**</span>: prod/prod
 
 Para finalizar, clique em <span id="assignment.19.3" lang="nolang" no>**Create**</span>.
 
-Consegue imaginar preencher todos esses detalhes toda vez? As pessoas desistiriam, e o ambiente ficaria cheio de inconsistências, e a inconsistência torna a automação futura ainda mais difícil.
+Consegue imaginar preencher todos esses detalhes toda vez? As pessoas desistiriam, e o ambiente ficaria cheio de inconsistências, e a inconsistência torna a automação ainda mais difícil.
 
 
 > [!NOTE]
-> Os templates são **versionados**. Se você editar o template mais tarde, uma nova versão é criada, enquanto as máquinas construídas a partir de versões mais antigas mantêm sua linhagem: um registro de auditoria completo do que foi implantado a partir de qual blueprint, o que seus reguladores irão apreciar.
+> Os templates são **versionados**. Se você editar o template mais tarde, uma nova versão é criada, enquanto as máquinas construídas a partir de versões anteriores mantêm sua linhagem: um registro de auditoria completo do que foi implantado a partir de qual blueprint, o que seus reguladores vão apreciar.
 
 
-📈 Tarefa 2: Escalar a frota sob pressão
+📈 Tarefa 2: Escale a frota sob pressão
 =========================================
 
 Como o template já existe, implantar múltiplos servidores leva apenas alguns cliques.
@@ -301,11 +299,11 @@ Como o template já existe, implantar múltiplos servidores leva apenas alguns c
   
 
 
-Em</span> [button label="SUSE Virtualization UI" variant="success"](tab-0) <span id="assignment.148" lang="pt" no>vá até **<span id="assignment.6.2" lang="nolang" no>Virtual Machines</span>** e clique em <span id="assignment.19.3" lang="nolang" no>**Create**</span>, depois preencha os seguintes detalhes:
+Em</span> [button label="SUSE Virtualization UI" variant="success"](tab-0) <span id="assignment.148" lang="pt-br" no>Vá até **<span id="assignment.6.2" lang="nolang" no>Virtual Machines</span>** e clique em <span id="assignment.19.3" lang="nolang" no>**Create**</span>, depois preencha os seguintes detalhes:
 
 1. Selecione <span id="assignment.148.1" lang="nolang" no>**Multiple Instance**</span>
-2. Defina <span id="assignment.39.3" lang="nolang" no>**Namespace**</span> como prod
-3. Defina <span id="assignment.148.2" lang="nolang" no>**Name Prefix**</span> como:</span>
+2. Defina o <span id="assignment.39.3" lang="nolang" no>**Namespace**</span> como prod
+3. Defina o <span id="assignment.148.2" lang="nolang" no>**Name Prefix**</span> como:</span>
 
 <div class="cred">
 
@@ -316,8 +314,8 @@ appcluster
 </div>
 
 
-<span id="assignment.149" lang="pt" no>4. Defina o <span id="assignment.149.1" lang="nolang" no>**Count**</span> para 2
-5. Marque <span id="assignment.149.2" lang="nolang" no>**Use VM Template**</span> e defina o <span id="assignment.149.3" lang="nolang" no>**Template**</span> para prod/prod-basic
+<span id="assignment.149" lang="pt-br" no>4. Defina o <span id="assignment.149.1" lang="nolang" no>**Count**</span> como 2
+5. Marque <span id="assignment.149.2" lang="nolang" no>**Use VM Template**</span> e defina o <span id="assignment.149.3" lang="nolang" no>**Template**</span> como prod/prod-basic
 6. Clique em <span id="assignment.19.3" lang="nolang" no>**Create**</span></span>
 
 
@@ -325,42 +323,76 @@ appcluster
 
 <div id="702" class="story">
 
-<span id="assignment.150" lang="pt" hist="vertrex-bank">A equipa de análise de risco começa a alimentar dados na frota expandida, estabilizando a posição de mercado do banco mesmo a tempo.</span>
+<span id="assignment.150" lang="pt-br" hist="vertrex-bank">A equipe de análise de risco começa a alimentar dados na frota expandida, estabilizando a posição do banco no mercado bem a tempo.</span>
 
 </div>
 
 
-<span id="assignment.151" lang="pt" no>🧹 Tarefa 3: Desmobilizar a frota
-===============================</span>
+<span id="assignment.151" lang="pt-br" no>🧹 Tarefa 3: Desativando a frota
+==================================</span>
 
 <div id="703" class="story">
 
-<span id="assignment.152" lang="pt" hist="vertrex-bank">A onda do mercado diminui. As máquinas virtuais ficam ociosas, à espera da próxima vaga — mas será que ela virá hoje? Amanhã? No próximo mês? Para estes nobres servidores, esperar é mais doloroso do que processar todos os números.</span>
+<span id="assignment.152" lang="pt-br" hist="vertrex-bank">A onda de mercado diminui. As máquinas virtuais ficam paradas, à espera da próxima leva — mas será que ela virá hoje? Amanhã? Mês que vem? Para esses nobres servidores, esperar é mais doloroso do que fazer todo o processamento de números.</span>
 
 </div>
 
-<span id="assignment.153" lang="pt" no>Já não precisa de tantas máquinas virtuais, apague-as todas de uma vez (não se preocupe se ainda estiverem a iniciar).</span> [button label="SUSE Virtualization UI" variant="success"](tab-0) <span id="assignment.154" lang="pt" no>navegue até a seção <span id="assignment.40.2" lang="nolang" no>**Virtual Machines**</span>:
+<span id="assignment.153" lang="pt-br" no>Você não precisa mais de tantas máquinas virtuais, exclua todas de uma vez (não se preocupe se elas ainda estiverem iniciando).</span> [button label="SUSE Virtualization UI" variant="success"](tab-0) <span id="assignment.154" lang="pt-br" no>navegue até a seção <span id="assignment.40.2" lang="nolang" no>**Virtual Machines**</span>:
 
 1. Marque a caixa <span id="assignment.154.1" lang="nolang" no>**checkboxes**</span> ao lado de todas as novas máquinas virtuais que você criou
-2. Clique em <span id="assignment.137.2" lang="nolang" no>**Delete**</span>, marque <span id="assignment.154.2" lang="nolang" no>**Delete All**</span>, e clique em <span id="assignment.154.3" lang="nolang" no>**Delete**
+2. Clique em <span id="assignment.137.2" lang="nolang" no>**Delete**</span>, marque <span id="assignment.154.2" lang="nolang" no>**Delete All**</span> e clique em <span id="assignment.154.3" lang="nolang" no>**Delete**
 </span></span>
 
 <div id="704" class="story">
 
-<span id="assignment.155" lang="pt" hist="vertrex-bank">O sofrimento destas nobres máquinas virtuais chegou ao fim. Vês as chamas, minha filha? Agora repousam no Valhalla.</span>
+<span id="assignment.155" lang="pt-br" hist="vertrex-bank">O sofrimento dessas nobres máquinas virtuais chegou ao fim. Está vendo as chamas, minha criança? Agora elas descansam no Valhalla.</span>
 
 </div>
 
 
 
 
-<span id="assignment.156" lang="pt" no>Novo em <span id="assignment.2.2" lang="nolang" no>Kubernetes</span>? **Salte à vontade.** Caso contrário, prove na</span> [button label="Cluster Terminal" variant="success"](tab-1) <span id="assignment.157" lang="pt" no>Elasticidade em hardware próprio. <span id="assignment.157.1" lang="pt" hist="vertrex-bank">Escalabilidade horizontal ao estilo cloud (para cima e para baixo) no próprio datacenter do banco: sem questões de residência de dados, sem custos de saída de dados.</span>
-- **O erro humano é eliminado por design.** As máquinas são criadas a partir de um blueprint dourado com controlo de versões, não da memória ou da rotina: a deriva de configuração não pode acontecer às 2 da manhã.
-- **Economia do ciclo de vida completo.** A desativação é uma checkbox e um clique, pelo que a capacidade temporária nunca se torna um custo permanente, o oposto exato da velha proliferação de <span id="ch1.intro1.1" lang="nolang" no>hypervisor</span>.
+<span id="assignment.156" lang="pt-br" no>🏋️ Treinos Bônus: para os curiosos por linha de comando (opcional)
+==========================================================
 
-Clique em <span id="assignment.32.1" lang="nolang" no>**Check**</span> para continuar. ⚔️
+Novo em <span id="assignment.2.2" lang="nolang" no>Kubernetes</span>? **Pule à vontade.** Caso contrário, prove no</span> [button label="Cluster Terminal" variant="success"](tab-1) <span id="assignment.157" lang="pt-br" no>que a UI, a frota e a API estejam todas em concordância:
 
-📚 Mais informação
+- **Inspecione o template como um objeto de API**: templates e suas versões também são recursos:
+
+```bash,wrap,run
+kubectl --kubeconfig .rodeo/harvester-kubeconfig get virtualmachinetemplates,virtualmachinetemplateversions -n prod
+```
+
+- **Recupere a definição do template em formato yaml**:
+
+```bash,wrap,run
+kubectl --kubeconfig .rodeo/harvester-kubeconfig get virtualmachinetemplates -n prod prod-basic -o yaml > template_prod-basic.yaml
+template_version_name=`kubectl --kubeconfig .rodeo/harvester-kubeconfig get virtualmachinetemplateversions -n prod -o name |grep '/prod-basic-'`
+kubectl --kubeconfig .rodeo/harvester-kubeconfig get -n prod ${template_version_name} -o yaml >> template_prod-basic.yaml
+```
+
+Você pode examinar o arquivo `template_prod-basic.yaml`:
+
+
+```bash,wrap,run
+less template_prod-basic.yaml
+```
+
+
+Ele contém uma definição semelhante à que você usou para criar o template na Tarefa 2.
+
+
+
+💼 Por que isso importa?
+==============================================
+
+- **Elasticidade em hardware próprio.** <span id="assignment.157.1" lang="pt-br" hist="vertrex-bank">Escala horizontal (scale-out e scale-in) no estilo cloud dentro do próprio datacenter do banco: sem questões de residência de dados, sem custos de egress.</span>
+- **O erro humano é eliminado por engenharia.** As máquinas vêm de um blueprint dourado versionado, não da memória e da prática manual: o desvio de configuração não pode acontecer às 2 da manhã.
+- **Economia completa do ciclo de vida.** Desativar é uma caixa de seleção e um clique, então a capacidade temporária nunca se torna custo permanente, exatamente o oposto da antiga proliferação de <span id="ch1.intro1.1" lang="nolang" no>hypervisor</span>.
+
+Clique <span id="assignment.32.1" lang="nolang" no>**Check**</span> para continuar. ⚔️
+
+📚 Mais informações
 ===================</span>
 
 - [<span id="ch1.intro1.2" lang="nolang" no>SUSE Virtualization</span>: Overview](https://documentation.suse.com/cloudnative/virtualization/latest/en/introduction/overview.html)

@@ -2,8 +2,8 @@
 slug: the-subterranean-divide-cluster-prep
 id: tmmoesxdhg4b
 type: challenge
-title: "<span id="assignment.12" lang="pt" hist="vertrex-bank">Capítulo 2: A Divisão Subterrânea</span>"
-teaser: <span lang="pt" hist="vertrex-bank" id="ts2">Dois silos de hardware, duas equipas que mal falam entre si. Desce ao datacenter, mapeia a topologia dos nós e dá a cada disco na fabric um preço que o banco consiga aceitar.</span>
+title: "\<span id="assignment.12" lang="pt-br" hist="vertrex-bank">🛗 Capítulo 2: A Divisão Subterrânea</span>"
+teaser: <span lang="pt-br" hist="vertrex-bank" id="ts2">Dois silos de hardware, duas equipes que praticamente não se falam. Desça ao datacenter, mapeie a topologia dos nós e dê a cada disco do fabric um preço que o banco consiga bancar.</span>
 tabs:
 - id: gix6w5fqkxd6
   title: SUSE Virtualization UI
@@ -26,7 +26,7 @@ difficulty: basic
 timelimit: 2400
 enhanced_loading: null
 ---
-<span lang="pt" hist="vertrex-bank" id="ts2">Dois silos de hardware, duas equipas que mal falam entre si. Desce ao datacenter, mapeia a topologia dos nós e dá a cada disco na fabric um preço que o banco consiga aceitar.</span>
+<span lang="pt-br" hist="vertrex-bank" id="ts2">Dois silos de hardware, duas equipes que praticamente não se falam. Desça ao datacenter, mapeie a topologia dos nós e dê a cada disco do fabric um preço que o banco consiga bancar.</span>
 
 <style type="text/css">
   * {
@@ -156,34 +156,38 @@ document.querySelectorAll('.cred .my-3 > div:first-child button').forEach(functi
 
 <div id="201" class="story">
 
-<span id="assignment.13" lang="pt" hist="vertrex-bank">Sarah lidera-te para fora dos silenciosos gabinetes executivos, entra num elevador seguro e desce até ao datacenter subterrâneo do banco. A temperatura ambiente desce abruptamente enquanto as pesadas portas biométricas de aço se trancam atrás de ti. A sala vibra com o rugido ensurdecedor e implacável dos sistemas de refrigeração industrial.
+<span id="assignment.13" lang="pt-br" hist="vertrex-bank">Sarah conduz você para fora das tranquilas suítes executivas, entra em um elevador seguro e desce até o datacenter subterrâneo do banco. A temperatura ambiente despenca bruscamente quando as pesadas portas biométricas de aço se trancam atrás de você. A sala vibra com o rugido ensurdecedor e implacável dos sistemas de refrigeração industrial.
 
-Ela aponta para o lado esquerdo da sala, onde filas de chassis de servidor elegantes e densamente compactados piscam com luzes azuis rápidas. *"Esses correm as nossas APIs de banca móvel,"* grita ela por cima do ruído das ventoinhas. *"Puros microsserviços. Totalmente containerizados e ágeis."*
+Ela aponta para o lado esquerdo da sala, onde fileiras de chassis de servidores elegantes e densamente compactados piscam com luzes azuis rápidas. *"Aqueles rodam nossas APIs de mobile banking,"* ela grita por cima do barulho dos ventiladores. *"Microsserviços puros. Totalmente conteinerizados e ágeis."*
 
-Depois aponta para o lado direito da sala, dominado por armários de servidor colossais e arcaicos que irradiam um calor desconfortável. *"E esses são as máquinas virtuais monolíticas legadas que guardam os livros-razão de transações principais. Dois mundos completamente diferentes. Dois silos de hardware diferentes. Duas equipas de engenharia diferentes que mal falam entre si."*
+Em seguida, ela aponta para o lado direito da sala, dominado por gabinetes de servidores enormes e arcaicos, irradiando um calor desconfortável. *"E aqueles são as máquinas virtuais monolíticas legadas que armazenam os livros-razão de transações centrais. Dois mundos completamente diferentes. Dois silos de hardware diferentes. Duas equipes de engenharia diferentes que praticamente não se falam."*
 
-Caminhas entre as duas filas, sentindo a diferença de temperatura nítida. *"Essa divisão acaba hoje,"* dizes-lhe.</span>
+Você caminha entre as duas fileiras, sentindo o diferencial de temperatura nítido. *"Essa divisão acaba hoje,"* você diz a ela.</span>
 
 </div>
 
-<span id="assignment.14" lang="pt" no>Um único tecido para dois mundos
+<span id="assignment.14" lang="pt-br" no>## Um único tecido para dois mundos
 
-Você explica a arquitetura elegante de <span id="ch1.intro1.2" lang="nolang" no>SUSE Virtualization</span>: ao usar tecnologias open-source avançadas sobre uma **fundação <span id="assignment.2.2" lang="nolang" no>Kubernetes</span>**, a plataforma não apenas *tolera* máquinas virtuais: ela as trata como **cidadãs nativas do ecossistema de contêineres**. As máquinas virtuais pesadas rodarão lado a lado com os contêineres ágeis, geridas pelo mesmo mecanismo de orquestração:
+Você explica a arquitetura elegante do <span id="ch1.intro1.2" lang="nolang" no>SUSE Virtualization</span>: ao usar tecnologias open-source avançadas sobre uma **fundação <span id="assignment.2.2" lang="nolang" no>Kubernetes</span>**, a plataforma não apenas *tolera* máquinas virtuais: ela as trata como **cidadãs nativas do ecossistema de contêineres**. As máquinas virtuais pesadas rodarão lado a lado com os contêineres ágeis, gerenciadas pelo mesmo mecanismo de orquestração:
 
-| Mundo da virtualização | Mundo <span id="assignment.14.1" lang="nolang" no>Container</span> | Unificado em <span id="ch1.intro1.2" lang="nolang" no>SUSE Virtualization</span> |
+| Mundo da virtualização | Mundo <span id="assignment.14.1" lang="nolang" no>Container</span> | Unificado no <span id="ch1.intro1.2" lang="nolang" no>SUSE Virtualization</span> |
 |---------------------|----------------|-------------------------------|
-| Hosts hipervisores | Nós <span id="assignment.2.2" lang="nolang" no>Kubernetes</span> | **Um único conjunto de nós executa ambos** |
-| Console de gestão do hipervisor | Ferramentas de contêiner | **Uma única plataforma por baixo**. <span id="ch1.intro1.2" lang="nolang" no>SUSE Virtualization</span> executa as VMs, o Rancher Prime comanda os clusters e os contêineres |
-| Arrays de armazenamento SAN | Volumes <span id="assignment.2.9" lang="nolang" no>CSI</span> | **<span id="assignment.2.8" lang="nolang" no>Longhorn</span> serve VMs e pods igualmente** |
+| Hosts de hipervisor | Nós <span id="assignment.2.2" lang="nolang" no>Kubernetes</span> | **Um único conjunto de nós executa ambos** |
+| Console de gerenciamento do hipervisor | Ferramentas de contêiner | **Uma única plataforma por baixo**. O <span id="ch1.intro1.2" lang="nolang" no>SUSE Virtualization</span> executa as VMs, o Rancher Prime comanda os clusters e os contêineres |
+| Arrays de armazenamento SAN | Volumes <span id="assignment.2.9" lang="nolang" no>CSI</span> | **O <span id="assignment.2.8" lang="nolang" no>Longhorn</span> atende tanto VMs quanto pods** |
 
-Essa última linha é onde você começa. Cada disco de VM, cada volume persistente de contêiner, tudo isso corre sobre o mesmo tecido de armazenamento distribuído, e nem toda carga de trabalho merece o mesmo preço.
+Essa última linha é onde você começa. Todo disco de VM, todo volume persistente de contêiner, tudo passa pelo mesmo tecido de armazenamento distribuído, e nem toda carga de trabalho merece o mesmo preço.
 
-🎯 Objetivos da Sua Missão
 
-1. Inspecionar a topologia física dos nós
+
+## 🎯 Objetivos da Sua Missão
+
+1. Inspecionar a topologia dos nós físicos
 2. Preparar um espaço de trabalho dedicado
-3. Compreender como o <span id="assignment.2.8" lang="nolang" no>Longhorn</span> replica os seus dados
-4. Construir uma classe de armazenamento em nível de custo para a equipa de desenvolvimento
+3. Entender como o <span id="assignment.2.8" lang="nolang" no>Longhorn</span> replica seus dados
+4. Construir uma classe de armazenamento por nível de custo para a equipe de desenvolvimento
+
+
 
 🔐 Credenciais de Login
 ====================
@@ -211,17 +215,17 @@ admin
 </div>
 
 
-<span id="assignment.15" lang="pt" no>☁️ O que é <span id="assignment.2.8" lang="nolang" no>Longhorn</span>?
+<span id="assignment.15" lang="pt-br" no>☁️ O que é <span id="assignment.2.8" lang="nolang" no>Longhorn</span>?
 ====================
 
-<span id="assignment.2.8" lang="nolang" no>Longhorn</span> é o sistema de armazenamento distribuído integrado no <span id="ch1.intro1.2" lang="nolang" no>SUSE Virtualization</span> que pode ser utilizado. Ele agrupa os discos brutos presentes em cada nó e transforma-os numa única infraestrutura de armazenamento partilhada.
+<span id="assignment.2.8" lang="nolang" no>Longhorn</span> é o sistema de armazenamento distribuído incorporado ao <span id="ch1.intro1.2" lang="nolang" no>SUSE Virtualization</span> que você pode usar. Ele reúne os discos brutos presentes em cada nó e os transforma em um único conjunto de armazenamento compartilhado.
 
-Por predefinição, cada volume que cria é replicado por vários nós, para que uma falha de disco ou o reinício de um nó nunca resulte em perda de dados. Sem SAN, sem equipa de armazenamento separada, um único sistema tanto para VMs como para contentores.
+Por padrão, todo volume que ele cria é replicado entre vários nós, então uma falha de disco ou a reinicialização de um nó nunca faz você perder dados. Sem SAN, sem equipe de armazenamento separada, um único sistema tanto para VMs quanto para contêineres.
 
-Está pronto a ser utilizado, mas se preferir usar outro <span id="assignment.2.9" lang="nolang" no>CSI</span> é livre de o fazer, sem dependência de fornecedor.
+Está pronto para você usar, mas se quiser utilizar outro <span id="assignment.2.9" lang="nolang" no>CSI</span> você é livre para fazê-lo, sem dependência de fornecedor.
 
 
-🖥️ Tarefa 1: Inspecionar a topologia física dos nós
+🖥️ Tarefa 1: Inspecione a topologia física dos nós
 =============================================
 
 
@@ -230,18 +234,18 @@ Está pronto a ser utilizado, mas se preferir usar outro <span id="assignment.2.
 
 
 
-Vá até</span> [button label="SUSE Virtualization UI" variant="success"](tab-0) <span id="assignment.16" lang="pt" no>, navegue até o menu do lado esquerdo e clique em **<span id="assignment.6.1" lang="nolang" no>Hosts</span>**.
+Vá até o</span> [button label="SUSE Virtualization UI" variant="success"](tab-0) <span id="assignment.16" lang="pt-br" no>, navegue até o menu à esquerda e clique em **<span id="assignment.6.1" lang="nolang" no>Hosts</span>**.
 
 1. Clique no nome de **um dos hosts** na lista
-2. Navegue pela interface e verifique as diferentes opções para entender melhor como as coisas funcionam. Observe como os dispositivos de bloco brutos são provisionados para os discos das máquinas virtuais. Cada disco que você vê aqui passa a fazer parte do pool de armazenamento distribuído <span id="assignment.2.8" lang="nolang" no>Longhorn</span> <span id="assignment.16.1" lang="pt" hist="vertrex-bank">que guardará os livros-razão do banco</span>.</span>
+2. Navegue pela interface e verifique as diferentes opções para entender melhor como tudo funciona. Observe como os dispositivos de bloco brutos são provisionados para os discos das máquinas virtuais. Cada disco que você vê aqui se torna parte do pool de armazenamento distribuído <span id="assignment.2.8" lang="nolang" no>Longhorn</span> <span id="assignment.16.1" lang="pt-br" hist="vertrex-bank">que vai conter os livros-razão do banco</span>.</span>
 
 
 <div id="203" class="story">
-<span id="assignment.17" lang="pt" hist="vertrex-bank">Bancos crescem, e este tecido também. Ficar com pouco espaço já não é uma atualização complexa. Instale um novo nó em rack, adicione os seus discos brutos ao pool, e o <span id="assignment.2.8" lang="nolang" no>Longhorn</span> reequilibra as réplicas automaticamente em todo o tecido expandido, sem tempo de inatividade, sem fins de semana de migração de dados. A capacidade de armazenamento escala da mesma forma que a computação: de forma incremental, conforme a procura.</span>
+<span id="assignment.17" lang="pt-br" hist="vertrex-bank">Bancos crescem, e essa malha também. Ficar sem espaço não é mais uma atualização complexa. Instale um novo nó, adicione seus discos brutos ao pool, e o <span id="assignment.2.8" lang="nolang" no>Longhorn</span> rebalanceia as réplicas automaticamente pela malha expandida, sem downtime, sem final de semana de migração de dados. A capacidade de armazenamento escala da mesma forma que a computação: de forma incremental, sob demanda.</span>
 </div>
 
 
-<span id="assignment.18" lang="pt" no>🏗️ Tarefa 2: Preparar um espaço de trabalho dedicado
+<span id="assignment.18" lang="pt-br" no>🏗️ Tarefa 2: Preparar um espaço de trabalho dedicado
 ========================================
 
 
@@ -249,14 +253,14 @@ Vá até</span> [button label="SUSE Virtualization UI" variant="success"](tab-0)
   
 
 
-A plataforma isola cargas de trabalho em **namespaces**, espaços de trabalho separados e governáveis no mesmo cluster.
+A plataforma isola as cargas de trabalho em **namespaces**, espaços de trabalho separados e governáveis no mesmo cluster.
 
-No</span> [button label="SUSE Virtualization UI" variant="success"](tab-0) <span id="assignment.19" lang="pt" no>, selecione <span id="assignment.19.1" lang="nolang" no>**Namespaces**</span> no menu à esquerda. Vai reparar que o prod já está presente na lista. <span id="assignment.19.2" lang="pt" hist="vertrex-bank">A equipe de plataforma o provisionou antes de você chegar, e é lá que as cargas de trabalho de produção do banco vão residir.</span>
+No</span> [button label="SUSE Virtualization UI" variant="success"](tab-0) <span id="assignment.19" lang="pt-br" no>, selecione <span id="assignment.19.1" lang="nolang" no>**Namespaces**</span> no menu à esquerda. Você notará que o prod já está na lista. <span id="assignment.19.2" lang="pt-br" hist="vertrex-bank">A equipe de plataforma provisionou isso antes da sua chegada, e é lá que as cargas de trabalho de produção do banco ficarão.</span>
 
-Agora crie o seu equivalente para desenvolvimento:
+Agora crie o equivalente para desenvolvimento:
 
 1. Clique em <span id="assignment.19.3" lang="nolang" no>**Create**</span>
-2. Defina o <span id="assignment.19.4" lang="nolang" no>**Name**</span> para:</span>
+2. Defina o <span id="assignment.19.4" lang="nolang" no>**Name**</span> como:</span>
 
 <div class="cred">
 
@@ -266,7 +270,7 @@ dev
 
 </div>
 
-<span id="assignment.20" lang="pt" no>3. Defina o <span id="assignment.20.1" lang="nolang" no>**Description**</span> para:</span>
+<span id="assignment.20" lang="pt-br" no>3. Defina o <span id="assignment.20.1" lang="nolang" no>**Description**</span> como:</span>
 
 <div class="cred">
 
@@ -277,34 +281,37 @@ VMs from dev
 </div>
 
 
-<span id="assignment.21" lang="pt" no>4. Clique <span id="assignment.19.3" lang="nolang" no>**Create**</span>
+<span id="assignment.21" lang="pt-br" no>4. Clique em <span id="assignment.19.3" lang="nolang" no>**Create**</span>
 
-O espaço de trabalho dos desenvolvedores está agora pronto, no futuro podemos atribuir-lhe quotas, políticas e controlos de acesso.
+O workspace de desenvolvedores agora está pronto, e no futuro poderemos atribuir a ele quotas, políticas e controles de acesso.
 
-💾 Tarefa 3: Entenda como o <span id="assignment.2.8" lang="nolang" no>Longhorn</span> replica os seus dados
+💾 Tarefa 3: Entenda como o <span id="assignment.2.8" lang="nolang" no>Longhorn</span> replica seus dados
 ========================================================
 
-Vamos ver *como* o backend de armazenamento se mantém saudável. Cada disco que o <span id="ch1.intro1.2" lang="nolang" no>SUSE Virtualization</span> atribui a uma VM ou a um pod é um **volume <span id="assignment.2.8" lang="nolang" no>Longhorn</span>**, e cada volume <span id="assignment.2.8" lang="nolang" no>Longhorn</span> é criado a partir de uma <span id="assignment.21.1" lang="nolang" no>**StorageClass**</span>: uma política que decide, entre outras coisas, quantas cópias dos seus dados existem em cada momento.
 
-No</span> [button label="SUSE Virtualization UI" variant="success"](tab-0) <span id="assignment.22" lang="pt" no>, vá para <span id="assignment.22.1" lang="nolang" no>**Advanced > Storage Classes**</span> e clique em harvester-longhorn.
 
-Repare no campo <span id="assignment.22.2" lang="nolang" no>**Number Of Replicas**</span>: está definido como **3**. Cada volume criado a partir desta classe recebe três cópias completas, distribuídas por três nós diferentes.</span>
+
+Vamos ver *como* o backend de armazenamento se mantém saudável. Todo disco que o <span id="ch1.intro1.2" lang="nolang" no>SUSE Virtualization</span> entrega a uma VM ou a um pod é um **volume <span id="assignment.2.8" lang="nolang" no>Longhorn</span>**, e todo volume <span id="assignment.2.8" lang="nolang" no>Longhorn</span> é criado a partir de uma <span id="assignment.21.1" lang="nolang" no>**StorageClass**</span>: uma política que decide, entre outras coisas, quantas cópias dos seus dados existem em um determinado momento.
+
+No</span> [button label="SUSE Virtualization UI" variant="success"](tab-0) <span id="assignment.22" lang="pt-br" no>, vá até <span id="assignment.22.1" lang="nolang" no>**Advanced > Storage Classes**</span> e clique em harvester-longhorn.
+
+Observe o campo <span id="assignment.22.2" lang="nolang" no>**Number Of Replicas**</span>: ele está definido como **3**. Cada volume criado a partir dessa classe recebe três cópias completas, distribuídas em três nós diferentes.</span>
 
 <div id="204" class="story">
-<span id="assignment.23" lang="pt" hist="vertrex-bank">É exatamente isso para os livros-razão de transações — perde-se um nó, ou até um disco a meio de uma escrita, e os dados sobrevivem intactos.</span>
+<span id="assignment.23" lang="pt-br" hist="vertrex-bank">Isso é exatamente correto para os livros-razão de transações — perca um nó, ou até mesmo perca um disco no meio de uma escrita, e os dados permanecem intactos.</span>
 </div>
 
-<span id="assignment.24" lang="pt" no>Vamos abrir o capô e ver como <span id="assignment.2.8" lang="nolang" no>Longhorn</span> armazena os dados:
+<span id="assignment.24" lang="pt-br" no>Vamos dar uma olhada por baixo dos panos e ver como o <span id="assignment.2.8" lang="nolang" no>Longhorn</span> armazena os dados:
 
-1. Vá para o</span> [button label="Cluster Terminal" variant="success"](tab-1) <span id="assignment.25" lang="pt" no>e SSH para uma das hosts <span id="ch1.intro1.2" lang="nolang" no>SUSE Virtualization</span>:
+1. Vá para o</span> [button label="Cluster Terminal" variant="success"](tab-1) <span id="assignment.25" lang="pt-br" no>e SSH em um dos hosts <span id="ch1.intro1.2" lang="nolang" no>SUSE Virtualization</span>:
 ```bash,run
 rodeo ssh harvester1
 ```
-2. Verifique a pasta <span id="assignment.2.8" lang="nolang" no>Longhorn</span> no nó <span id="assignment.25.1" lang="nolang" no>harvester1</span>: verá algumas pastas e ficheiros:
+2. Verifique a pasta <span id="assignment.2.8" lang="nolang" no>Longhorn</span> no nó <span id="assignment.25.1" lang="nolang" no>harvester1</span>: você verá algumas pastas e arquivos:
 ```bash,run
 ls /var/lib/harvester/defaultdisk
 ```
-3. Dentro da pasta replicas, encontre uma pasta por cada réplica de volume que este nó contém:
+3. Dentro da pasta replicas, encontre uma pasta para cada réplica de volume que este nó possui:
 ```bash,wrap,run
 ls /var/lib/harvester/defaultdisk/replicas/
 ```
@@ -314,9 +321,9 @@ exit
 ```
 
 > [!NOTE]
-> Três réplicas significam três vezes o espaço em disco ocupado. Essa é a troca correta para dinheiro de produção. É um desperdício para uma VM de teste descartável de um developer que será eliminada até sexta-feira. O número de réplicas é uma **política**, não uma lei da física, e as políticas podem ser ajustadas por carga de trabalho.
+> Três réplicas significam três vezes o espaço em disco. Essa é a troca correta para o dinheiro de produção. É um desperdício para uma VM de teste descartável de um desenvolvedor que será excluída até sexta-feira. A contagem de réplicas é uma **política**, não uma lei da física, e políticas podem ser ajustadas por carga de trabalho.
 
-🧅 Tarefa 4: Construir uma storage class de custo reduzido para a equipa de desenvolvimento
+🧅 Tarefa 4: Construa uma storage class de nível de custo para a equipe de desenvolvimento
 =====================================================================
 
 
@@ -325,9 +332,9 @@ exit
 
 
 
-A equipa de desenvolvimento não precisa de replicação de nível produção para os seus sandboxes, precisa de iteração barata e rápida. <span id="assignment.25.2" lang="pt" hist="vertrex-bank">Você terá seu próprio nível de armazenamento, precificado pelo que ele realmente é: descartável.</span>
+A equipe de desenvolvimento não precisa de replicação de nível de produção para seus sandboxes, eles precisam de iteração barata e rápida. <span id="assignment.25.2" lang="pt-br" hist="vertrex-bank">Você vai ter seu próprio nível de armazenamento, precificado pelo que ele realmente é: descartável.</span>
 
-No</span> [button label="SUSE Virtualization UI" variant="success"](tab-0) <span id="assignment.26" lang="pt" no>, em <span id="assignment.22.1" lang="nolang" no>**Advanced > Storage Classes**</span>:
+No</span> [button label="SUSE Virtualization UI" variant="success"](tab-0) <span id="assignment.26" lang="pt-br" no>, sob <span id="assignment.22.1" lang="nolang" no>**Advanced > Storage Classes**</span>:
 
 1. Clique em <span id="assignment.19.3" lang="nolang" no>**Create**</span>
 2. Defina <span id="assignment.19.4" lang="nolang" no>**Name**</span> como:</span>
@@ -357,7 +364,7 @@ harvester-longhorn-1rep
 
 5. Click <span id="assignment.19.3" lang="nolang" no>**Create**</span>
 
-Two StorageClasses sit side by side in the list: `harvester-longhorn` (3 replicas, production) and <b class="highlightcopy">harvester-longhorn-1rep</b> (1 replica for dev sandboxes, at a third of the disk cost). <span id="assignment.29" lang="pt" hist="vertrex-bank">A equipa de desenvolvimento vai recorrer a este nível sempre que criarem uma VM descartável nos capítulos seguintes.</span>
+Two StorageClasses sit side by side in the list: `harvester-longhorn` (3 replicas, production) and <b class="highlightcopy">harvester-longhorn-1rep</b> (1 replica for dev sandboxes, at a third of the disk cost). <span id="assignment.29" lang="pt-br" hist="vertrex-bank">A equipe de desenvolvimento vai recorrer a esse nível toda vez que subir uma VM descartável nos capítulos seguintes.</span>
 
 > [!NOTE]
 > One replica means **zero redundancy**, lose that single node and the volume is gone. That is an acceptable risk for a sandbox nobody depends on overnight, and a very deliberate trade-off you are making on the record, not an accident. Storage classes can also encode disk tags to steer workloads to specific hardware, production on fast NVMe, development on cheaper spindles.
@@ -370,33 +377,33 @@ Two StorageClasses sit side by side in the list: `harvester-longhorn` (3 replica
 </div>
 
 
-New to <span id="assignment.2.2" lang="nolang" no>Kubernetes</span>? **Skip ahead freely.** If you are curious, everything you just did in the UI is also visible through the <span id="assignment.2.2" lang="nolang" no>Kubernetes</span> API, open the </span> [button label="Cluster Terminal" variant="success"](tab-1) <span id="assignment.30" lang="pt" no>**See your UI storage classes as API objects**: the workspace and both storage tiers:
+New to <span id="assignment.2.2" lang="nolang" no>Kubernetes</span>? **Skip ahead freely.** If you are curious, everything you just did in the UI is also visible through the <span id="assignment.2.2" lang="nolang" no>Kubernetes</span> API, open the </span> [button label="Cluster Terminal" variant="success"](tab-1) <span id="assignment.30" lang="pt-br" no>**Veja suas classes de armazenamento de UI como objetos de API**: o workspace e ambos os níveis de armazenamento:
 
 ```bash,wrap,run
 kubectl --kubeconfig .rodeo/harvester-kubeconfig get namespace dev -o wide; kubectl --kubeconfig .rodeo/harvester-kubeconfig get storageclasses;
 ```
 
-**Label the new workspace** so future automation can target it easily:
+- **Rotule o novo workspace** para que a automação futura possa direcioná-lo facilmente:
 
 ```bash,wrap,run
 kubectl --kubeconfig .rodeo/harvester-kubeconfig label namespace dev stage=dev
 ```
 
-💼 ¿Por qué es esto importante?
+💼 Por que isso importa?
 ==============================================
 
-- **Los silos desaparecen.** Las VM y los contenedores comparten nodos, almacenamiento y un único equipo de operaciones. La "división de temperatura" del centro de datos ha desaparecido.
-- **Sin abismo de reciclaje.** Las habilidades <span id="assignment.2.2" lang="nolang" no>Kubernetes</span> del equipo de contenedores ahora también gestionan el parque de VM; el equipo de VM obtiene una interfaz gráfica familiar basada en la API de <span id="assignment.2.2" lang="nolang" no>Kubernetes</span>.
-- **Los namespaces aportan gobernanza.** Las cargas de trabajo financieras residen en `prod` con sus propias cuotas, políticas y controles de acceso. A los auditores les encantará.
-- **El almacenamiento ahora tiene una lista de precios.** La replicación es un dial, no un valor predeterminado. Los datos de producción obtienen tres copias porque deben tenerlas; los entornos de prueba desechables obtienen una porque no deberían costar más de lo necesario.</span>
+- **Os silos desaparecem.** VMs e contêineres compartilham nós, armazenamento e uma única equipe de operações. A "divisão de temperatura" do datacenter acabou.
+- **Nenhum penhasco de retreinamento.** As habilidades <span id="assignment.2.2" lang="nolang" no>Kubernetes</span> da equipe de contêineres agora também gerenciam o parque de VMs; a equipe de VMs ganha uma interface familiar de apontar e clicar, respaldada pela API <span id="assignment.2.2" lang="nolang" no>Kubernetes</span>.
+- **Namespaces trazem governança.** Cargas de trabalho financeiras vivem em `prod` com suas próprias cotas, políticas e controles de acesso. Os auditores vão adorar.
+- **O armazenamento agora tem uma lista de preços.** A replicação é um seletor, não um padrão. Os dados de produção recebem três cópias porque precisam; os sandboxes descartáveis recebem uma porque não devem custar mais do que o necessário.</span>
 
 <div id="202" class="story">
 
-<span id="assignment.31" lang="pt" hist="vertrex-bank">Sarah observa por cima do seu ombro enquanto o novo espaço de trabalho e os dois níveis de armazenamento aparecem no painel, um após o outro. Um leve sorriso surge em seu rosto. *"A base está sólida. Vamos ao trabalho."*</span>
+<span id="assignment.31" lang="pt-br" hist="vertrex-bank">Sarah observa por cima do seu ombro enquanto o novo workspace e os dois níveis de armazenamento aparecem no painel, um após o outro. Um leve sorriso surge em seu rosto. *"A base está sólida. Vamos ao trabalho."*</span>
 
 </div>
 
-<span id="assignment.32" lang="pt" no>Clique <span id="assignment.32.1" lang="nolang" no>**Check**</span> para continuar. ⚡
+<span id="assignment.32" lang="pt-br" no>Clique em <span id="assignment.32.1" lang="nolang" no>**Check**</span> para continuar. ⚡
 
 
 📚 Mais informações
