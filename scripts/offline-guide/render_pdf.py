@@ -65,6 +65,13 @@ def inject_css(html_path, meta):
     html_path.write_text(h)
 
 
+def cache_key(url, path):
+    """Cache key for a converted image. Includes the source's size and mtime
+    so editing an image in place invalidates its cached JPEG."""
+    st = path.stat()
+    return hashlib.md5(f"{url}|{st.st_size}|{st.st_mtime_ns}".encode()).hexdigest()[:12]
+
+
 def optimize_images(html_path, cache_dir):
     """Downscale/recompress every embedded image to keep the PDF small.
     Animated GIFs are reduced to their first frame (a static demo image is
@@ -78,7 +85,7 @@ def optimize_images(html_path, cache_dir):
         if not path.exists():
             print("MISSING image:", path)
             continue
-        key = hashlib.md5(s.encode()).hexdigest()[:12]
+        key = cache_key(s, path)
         out = cache_dir / f"{key}.jpg"
         if not out.exists():
             src_spec = f"{path}[0]" if path.suffix.lower() == ".gif" else str(path)
